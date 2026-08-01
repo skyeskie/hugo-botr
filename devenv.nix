@@ -7,6 +7,7 @@
   # https://devenv.sh/packages/
   packages = with pkgs; [
     git
+    go
     hugo
   ];
 
@@ -22,7 +23,7 @@
   # https://devenv.sh/scripts/
   scripts.versions.exec = ''
     hugo version
-    go --version
+    go version
   '';
 
   # https://devenv.sh/basics/
