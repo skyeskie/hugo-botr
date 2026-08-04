@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://www.bellsoftherockies.org/'
 locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'Bells of the Rockies'
 
 [module]
 [[module.imports]]

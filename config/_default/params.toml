@@ -1,0 +1,19 @@
+[ananke]
+show_recent_posts = false
+
+[ananke.pages]
+show_date = false
+
+[ananke.social.follow]
+new_window_icon = false
+networks = [
+    "facebook",
+    "youtube"
+]
+
+[ananke.social.facebook]
+usename = "BellsoftheRockiesFans"
+
+[ananke.social.youtube]
+username = "bellsoftherockies6348"
+
