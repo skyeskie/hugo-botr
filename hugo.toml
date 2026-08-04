@@ -2,6 +2,10 @@ baseURL = 'https://www.bellsoftherockies.org/'
 locale = 'en-us'
 title = 'Bells of the Rockies'
 
+[privacy]
+[privacy.youtube]
+privacyEnhanced = true
+
 [module]
 [[module.imports]]
 disable = false

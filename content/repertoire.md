@@ -4,12 +4,11 @@ title = 'Repertoire'
 
 **Just a sample of past performances from your favorite handbells choir...**
 
-YouTube embed
-- Jingle Bells
-- Christmas Kaleidoscope
-- Stille Nacht
-- Sing We Now of Christmas
-- Still, Still, Still
+{{< youtube GOcqeK9295o >}}
+{{< youtube 5Zw37EsBBnU >}}
+{{< youtube 1ymVadt53WM >}}
+{{< youtube E4eXynfHj_4 >}}
+{{< youtube FQjDe-Hwz3A >}}
 
 [Watch Us on YouTube](https://www.youtube.com/@bellsoftherockies6348)
 
