@@ -12,3 +12,10 @@ disable = false
 ignoreConfig = false
 ignoreImports = false
 path = 'github.com/gohugo-ananke/ananke/v2'
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.parser]
+[markup.goldmark.parser.attribute]
+block = true
+title = true

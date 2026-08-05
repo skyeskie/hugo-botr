@@ -1,0 +1,43 @@
+{{- /*
+Adapted from Ananke theme
+
+@param {String} [action] URL to submit the form data via POST
+@param {bool} [show-message=true] Whether to include the main message block
+@param {bool} [show-telephone=false] Whether to include a field for phone number
+@param {bool} [show-company=false] Whether to include a field for company name
+@param {String} [message] Alternative to translated Message, if show-message (TODO: i18n)
+
+*/ -}}
+
+{{ $.Scratch.Add "labelClasses" "f6 b db mb1 mt3 sans-serif mid-gray" }}
+{{ $.Scratch.Add "inputClasses" "w-100 f5 pv3 ph3 bg-light-gray bn" }}
+{{ $req := "<span class=\"form-required\">*</span>" | safeHTML }}
+
+<form class="black-80 sans-serif" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST" role="form">
+    <label class="{{ $.Scratch.Get "labelClasses" }}">
+        {{ $req }} Indicates required field
+    </label>
+    <label class="{{ $.Scratch.Get "labelClasses" }}"  for="name">{{ lang.Translate "yourName" }}{{ $req }}</label>
+    <input type="text" id="name" name="name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="name"/>
+
+    <label class="{{ $.Scratch.Get "labelClasses" }}" for="email">{{ lang.Translate "emailAddress" }}{{ $req }}</label>
+    <input type="email" id="email" name="email" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder="email@example.com"  aria-labelledby="email"/>
+
+    {{ if .Get "show-telephone" | partial "funcs/bool-def-false.html" }}
+    <label class="{{ $.Scratch.Get "labelClasses" }}" for="phone">Phone{{ $req }}</label>
+    <input type="tel" id="phone" name="phone" class="{{ $.Scratch.Get "inputClasses" }}" required placeholder="000-0000" aria-labelledby="phone"/>
+    {{ end }}
+
+    {{ if .Get "show-company" | partial "funcs/bool-def-false.html" }}
+        <label class="{{ $.Scratch.Get "labelClasses" }}" for="company">Company Name (if applicable)</label>
+        <input type="text" id="company" name="company" class="{{ $.Scratch.Get "inputClasses" }}" aria-labelledby="company"/>
+    {{ end }}
+
+    {{ if .Get "show-message" | partial "funcs/bool-def-true.html" }}
+    {{- $message := or (.Get "message-label") (lang.Translate "message") -}}
+    <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">{{ $message }}{{ $req }}</label>
+    <textarea id="message" name="message" class="{{ $.Scratch.Get "inputClasses" }} h4" aria-labelledby="message"></textarea>
+    {{ end }}
+
+    <input class="db w-100 mv2 white pa3 bn hover-shadow hover-bg-black bg-animate bg-black" type="submit" value="{{ lang.Translate "send" }}" />
+</form>

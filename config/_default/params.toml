@@ -1,5 +1,10 @@
 [ananke]
 show_recent_posts = false
+custom_css = [
+    "custom.css",
+    "forms.css",
+    "page-concerts.css"
+]
 
 [ananke.pages]
 show_date = false

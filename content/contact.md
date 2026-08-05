@@ -2,11 +2,22 @@
 Title = "Contact Bells of the Rockies"
 +++
 
-Email
+Email us at {{< br >}}
+bellsoftherockies1996@gmail.com
+{ .center }
+
+{{< columns >}}
+
 
 Facebook
 
-Image
+![Treble Ringers](/images/bellsoftherockiesapril2025-141.jpg)
 
-{{< form-contact action="https://www.bellsoftherockies.org/ajax/apps/formSubmitAjax.php" >}}
-Email form
+{{< column >}}
+
+{{< form-contact-custom
+    action="https://www.bellsoftherockies.org/ajax/apps/formSubmitAjax.php"
+    message-label="Comment"
+>}}
+
+{{< endcolumns >}}

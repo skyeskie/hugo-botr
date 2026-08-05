@@ -1,0 +1,61 @@
+article {
+    max-width: 1000px !important;
+}
+
+header.cover.bg-top {
+    background-origin: padding-box;
+    background-position: 50% 47.27%;
+    background-size: cover;
+}
+
+h2.left, h3.left {
+    width: 35%;
+    display: block;
+    float: left;
+    margin: 15px;
+    padding: 0;
+    text-align: left;
+}
+
+h3.left + p {
+    display: block;
+    float: left;
+    width: 60%;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.text-lg {
+    font-size: 1.5em;
+    margin-top: 3em;
+}
+
+.yt-half {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+}
+
+.clear {
+    clear: both;
+}
+
+.full-ringers {
+    color: #FFCCCC;
+    text-align: center;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.center-left, .center-right {
+    display: block;
+    width: 49%;
+}
+
+.center-left { float: left; }
+
+.center-right { float: right; }

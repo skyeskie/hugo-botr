@@ -1,0 +1,10 @@
+{{- /*
+@param Value provided by .Get to check for boolean
+*/ -}}
+{{ $result := true }}
+{{ if in (slice "false" false 0) . }}
+    {{ $result = false }}
+{{ else if in (slice "true" true 1) . }}
+    {{ $result = true }}
+{{ end }}
+{{ return $result }}

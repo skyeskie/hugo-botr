@@ -1,0 +1,12 @@
+article.page-concerts {
+    text-align: center;
+}
+
+article.page-concerts h2 {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+article.page-concerts p {
+    font-weight: bold;
+}
