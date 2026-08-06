@@ -1,0 +1,48 @@
+{{/* Imported from Ananke */}}
+
+{{ define "main" }}
+    {{ $summary_template := "summary" }}
+    {{ if $.Param "ananke.pages.show_list_images" }}
+        {{ $summary_template = "summary-with-image" }}
+    {{ end }}
+
+    <article class="pa3 pa4-ns nested-copy-line-height center">
+        {{- .Content -}}
+
+        <h2>Bells of the Rockies Members</h2>
+
+        {{- $director := index (where .Pages "Params.director" true) 0 -}}
+        {{- /* Remove the ByParam to go back to page weights */ -}}
+        {{- $ringers := where (.Pages.ByParam "sort") "Params.director" false -}}
+        {{- $last_ringer := index ($ringers | last 1) 0 -}}
+
+        <p>Ringers in Bells of the Rockies audition for the privilege of ringing with the group. Our artistic director
+            is charged with leading the group musically including repertoire, assignments, and morale. Ringers serve in
+            a variety of volunteer roles as Board Members of the organization and other helpful assignments.
+            Our {{ .Param "season" }} roster includes our director, {{ with $director -}}
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{- end -}}, and the following ringers: {{ range $ringers }}
+                {{- if eq . $last_ringer }} and {{end}}
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{- if ne . $last_ringer }},{{ end -}}
+            {{ end }}.</p>
+
+        <section class="flex-ns mt5 flex-wrap justify-around center">
+            {{ with $director }}
+                <div class="w-100"><a href="{{ .Permalink }}">
+                    <img class="w-30-l mb4 relative"
+                     src="{{ .Param "photo" }}"
+                     alt="{{ .Title }}"
+                    />
+                </a></div>
+            {{ end }}
+            <br/>
+            {{ range $ringers }}
+                {{- $photo := or (.Param "photo") "_default.jpg" }}
+                <a href="{{ .Permalink }}" class="w-100 w-30-l mb4 relative bg-white">
+                    <img src="{{ $photo }}" alt="{{ .Title }}" />
+                </a>
+            {{ end }}
+        </section>{{/* former internal template */}}
+    </article>
+{{ end }}
