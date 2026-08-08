@@ -1,8 +1,13 @@
+body_classes = "avenir bg-near-black"
+text_color = "moon-gray"
+
 [ananke]
 show_recent_posts = false
+
 custom_css = [
     "custom.css",
     "forms.css",
+    "header.css",
     "page-concerts.css"
 ]
 

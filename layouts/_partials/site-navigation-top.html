@@ -1,0 +1,15 @@
+<nav class="pv3 ph3 ph4-ns flex-ns" role="navigation">
+    <div class="flex-grow-1-ns">
+        <a href="{{ .Site.Home.RelPermalink }}" class="f2 ttu fw6 hover-white white-90 dib no-underline">
+            {{ with .Site.Params.site_logo }}
+                <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+            {{ else }}
+                {{ .Site.Title }}
+            {{ end }}
+        </a>
+    </div>
+    <div class="items-center">
+        {{ partials.Include "i18nlist.html" . }}
+        {{ partials.IncludeCached "social/follow.html" . }}
+    </div>
+</nav>
