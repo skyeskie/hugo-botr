@@ -1,0 +1,25 @@
+main:
+- name: Home
+  pageRef: /
+  weight: 10
+- name: About Us
+  pageRef: /about-us/
+  weight: 20
+- name: Concerts
+  pageRef: /concerts/
+  weight: 30
+- name: Ringers
+  pageRef: /ringers/
+  weight: 40
+- name: Repertoire
+  pageRef: /repertoire/
+  weight: 50
+- name: Audition
+  pageRef: /audition/
+  weight: 60
+- name: Contact
+  pageRef: /contact/
+  weight: 70
+- name: Support
+  pageRef: /support/
+  weight: 80

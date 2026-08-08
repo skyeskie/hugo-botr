@@ -1,0 +1,25 @@
+body_classes: avenir bg-near-black
+text_color: moon-gray
+
+ananke:
+  show_recent_posts: false
+
+  custom_css:
+  - custom.css
+  - forms.css
+  - header.css
+  - page-concerts.css
+
+  pages:
+    show_date: false
+
+  social:
+    follow:
+      new_window_icon: false
+      networks:
+      - facebook
+      - youtube
+    facebook:
+      usename: BellsoftheRockiesFans
+    youtube:
+      username: bellsoftherockies6348
