@@ -1,5 +1,6 @@
 +++
 title = 'About Bells of the Rockies'
+featured_image = '/images/bg-handbells.jpg'
 +++
 
 ![Banner image of Bell Choir](/images/bellsoftherockiesapril2025-group2.jpg)

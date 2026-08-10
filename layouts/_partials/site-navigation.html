@@ -1,4 +1,4 @@
-<nav class="pt3 ph3 ph4-ns pb5" role="navigation">
+<nav class="pt3 ph3 ph4-ns pb1" role="navigation">
     {{ if .Site.Menus.main }}
         {{- $curLink := .RelPermalink -}}
         <ul class="flex flex-wrap justify-around {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pr0 ml3" "pl0 mr3" }}">

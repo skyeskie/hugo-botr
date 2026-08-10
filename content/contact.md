@@ -1,5 +1,6 @@
 +++
 Title = "Contact Bells of the Rockies"
+featured_image = '/images/bg-handbells.jpg'
 +++
 
 Email us at {{< br >}}

@@ -59,3 +59,13 @@ h3.left + p {
 .center-left { float: left; }
 
 .center-right { float: right; }
+
+.qa strong {
+    color: #5e2ca5;
+}
+
+.ringers-index a {
+    text-decoration: none;
+    color: #b5aaf6;
+    font-weight: bolder;
+}

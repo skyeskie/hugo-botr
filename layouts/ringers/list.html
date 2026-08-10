@@ -6,7 +6,7 @@
         {{ $summary_template = "summary-with-image" }}
     {{ end }}
 
-    <article class="pa3 pa4-ns nested-copy-line-height center">
+    <article class="ringers-index pa3 pa4-ns nested-copy-line-height {{ $.Param "text_color" | compare.Default "mid-gray" }} center f4 {{ $.Param "post_content_classes" | compare.Default "serif"}}">
         {{- .Content -}}
 
         <h2>Bells of the Rockies Members</h2>
@@ -16,9 +16,9 @@
         {{- $ringers := where (.Pages.ByParam "sort") "Params.director" false -}}
         {{- $last_ringer := index ($ringers | last 1) 0 -}}
 
-        <p>Ringers in Bells of the Rockies audition for the privilege of ringing with the group. Our artistic director
-            is charged with leading the group musically including repertoire, assignments, and morale. Ringers serve in
-            a variety of volunteer roles as Board Members of the organization and other helpful assignments.
+        <p class="tl f3 fw4">Ringers in Bells of the Rockies audition for the privilege of ringing with the group. Our artistic
+            director is charged with leading the group musically including repertoire, assignments, and morale. Ringers
+            serve in a variety of volunteer roles as Board Members of the organization and other helpful assignments.
             Our {{ .Param "season" }} roster includes our director, {{ with $director -}}
             <a href="{{ .Permalink }}">{{ .Title }}</a>
             {{- end -}}, and the following ringers: {{ range $ringers }}
@@ -39,8 +39,8 @@
             <br/>
             {{ range $ringers }}
                 {{- $photo := or (.Param "photo") "_default.jpg" }}
-                <a href="{{ .Permalink }}" class="w-100 w-30-l mb4 relative bg-white">
-                    <img src="{{ $photo }}" alt="{{ .Title }}" />
+                <a href="{{ .Permalink }}" class="w-100 w-30-l mb4 relative">
+                    <img src="{{ $photo }}" alt="{{ .Title }}" class="w-100" />
                 </a>
             {{ end }}
         </section>{{/* former internal template */}}
