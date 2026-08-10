@@ -22,10 +22,10 @@
         {{ $displayName = (print "Director, " .Title) }}
     {{ end }}
 
-    <article class="{{ $post_class }} flex-l {{ if $needs_aside }}mw8{{ else }}mw7{{ end }} center ph3 flex-wrap justify-between">
+    <article class="pv4 {{ $post_class }} flex-l {{ if $needs_aside }}mw8{{ else }}mw7{{ end }} center ph3 flex-wrap justify-between">
         <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | compare.Default "serif"}} f4 nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }} {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl4-l" "pr4-l" }} {{ if $needs_aside }}w-two-thirds-l{{ else }}w-100-l{{ end }}">
             {{- $ringerImage := path.Join "ringers" (.Param "photo") }}
-            <div class="center-left">
+            <div class="center-left pt3">
                 {{ with resources.Get $ringerImage }}
                     <img src="{{ .RelPermalink }}" alt="{{ $displayName }}" />
                 {{ else }}
@@ -35,8 +35,8 @@
                     {{ warnf "Unable to get ringer image %q" $ringerImage }}
                 {{ end }}
             </div>
-            <div class="center-right">
-                <h1 class="f1 athelas mt3 mb1">
+            <div class="center-right tl">
+                <h1 class="f1 athelas mt0 mb1 pt0 tc">
                     {{- $displayName -}}
                 </h1>
                 {{- partials.Include "hook.html" (dict "hook" "content-before" "context" .) -}}

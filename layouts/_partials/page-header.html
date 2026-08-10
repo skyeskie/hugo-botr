@@ -48,7 +48,7 @@
 {{ else }}
     <header>
         <div class="{{ .Site.Params.background_color_class | compare.Default "bg-black" }}">
-            {{ partials.Include "site-navigation.html" . }}
+            {{ partials.Include "site-navigation-top.html" . }}
         </div>
     </header>
 {{ end }}
