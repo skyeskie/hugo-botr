@@ -13,6 +13,9 @@ module:
     ignoreConfig: false
     ignoreImports: false
 
-markup.goldmark.parser.attribute:
-  block: true
-  title: true
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true

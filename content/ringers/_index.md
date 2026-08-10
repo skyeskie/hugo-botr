@@ -1,5 +1,6 @@
 +++
 title = 'Meet the Ringers'
+featured_image = "/images/home-right.jpg"
 season = "2025-2027"
 +++
 

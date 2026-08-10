@@ -7,6 +7,7 @@ title = 'About Bells of the Rockies'
 Bells of the Rockies is an auditioned community handbell choir comprised of handbell ringers from the Northern Colorado 
 area. Our mission is dedicated to musical excellence and service to the community through artistic handbell performances.
 Our goal is to increase our educational and community/charity outreach.
+{ .tl }
 
 ![Hanbells Ringing](/images/bellsoftherockiesapril2025-110.jpg)
 { .center-left }
