@@ -13,6 +13,10 @@ module:
     ignoreConfig: false
     ignoreImports: false
 
+caches:
+  images:
+    dir: :cacheDir/images
+
 markup:
   goldmark:
     parser:
