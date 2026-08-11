@@ -12,6 +12,7 @@ module:
     disable: false
     ignoreConfig: false
     ignoreImports: false
+#  - path: github.com/hugomods/images
 
 caches:
   images:
@@ -23,3 +24,8 @@ markup:
       attribute:
         block: true
         title: true
+    renderHooks:
+      image:
+        useEmbedded: fallback
+      link:
+        useEmbedded: fallback

@@ -20,6 +20,9 @@ featured_image = "/images/home-right.jpg"
 ![bells on table](/images/home-right.jpg "Handbells on Table")
 { .fl .w-50-m .w-50-l .pa2 }
 
+---
+{ .clear .dark-gray }
+
 ### We are committed to excellence in musical performances.
 { .fl .w-third-l .tl }
 
