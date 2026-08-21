@@ -6,6 +6,7 @@
 {{ end }}
 
 {{ define "main" }}
+    {{- $defaultRingerImage := "/ringers/_default.jpg" -}}
     {{- $related_content := .RegularPages.Related . -}}
     {{- $needs_aside := or .Params.toc $related_content -}}
     {{ $page := .}}
@@ -28,8 +29,8 @@
             <div class="center-left pt3">
                 {{ with resources.Get $ringerImage }}
                     <img src="{{ .RelPermalink }}" alt="{{ $displayName }}" />
-                {{ else }}
-                    <img src="/images/ringers_default.jpg" alt="{{ $displayName }}" />
+                {{ else with resources.Get $defaultRingerImage }}
+                    <img src="{{ .RelPermalink }}" alt="{{ $displayName }}" />
                     <pre>{{ $ringerImage }}
 {{ .Param "photo" }}</pre>
                     {{ warnf "Unable to get ringer image %q" $ringerImage }}
@@ -59,7 +60,9 @@
         </div>
         <header class="mt4 w-100 ringers">
             <aside class="b helvetica dib bg-dark-gray ph3 pv2 br-pill">
-                <a class="link white-90 hover-white hover-bg-black-10" href="../">Back to Ringer Photos</a>
+                {{ with .Parent }}
+                <a class="link white-90 hover-white hover-bg-black-10" href="{{ .RelPermalink }}">Back to Ringer Photos</a>
+                {{ end }}
             </aside>            {{- partials.IncludeCached "social/share.html" . . -}}
             {{ with .Params.author | compare.Default .Site.Params.author }}
                 <p class="tracked">
