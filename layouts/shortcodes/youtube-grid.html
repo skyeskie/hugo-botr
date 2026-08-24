@@ -1,0 +1,36 @@
+{{- /*
+Adapted from Ananke theme
+
+@param {String} [id] Channel ID
+
+*/ -}}
+
+{{/* Get remote data. */}}
+{{ $channel_id := .Get "id" }}
+{{ $data := dict }}
+{{ $url := printf "https://www.youtube.com/feeds/videos.xml?channel_id=%s" $channel_id }}
+{{ with try (resources.GetRemote $url) }}
+    {{ with .Err }}
+        {{ errorf "Unable to get remote resource %s: %s" $url . }}
+    {{ else with .Value }}
+        {{ $data = . | transform.Unmarshal }}
+    {{ else }}
+        {{ errorf "Unable to get remote resource %s" $url }}
+    {{ end }}
+{{ end }}
+{{/*{{ $data := resources.Get "videos.xml" | transform.Unmarshal }}*/}}
+
+<div class="youtube-grid">
+    {{ range $data.entry }}
+        {{ $vid := .videoId }}
+        <div><iframe
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            loading="eager"
+            referrerpolicy="strict-origin-when-cross-origin"
+            src="https://www.youtube.com/embed/{{ $vid }}"
+            title="{{ default "Youtube Video" .title }}">
+        </iframe></div>
+    {{ end }}
+</div>
+
+{{/*<pre>{{ debug.Dump $data }}</pre>*/}}
