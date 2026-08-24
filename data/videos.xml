@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+ <link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UC1kz7--4aWBsPaVsxjELNaw"/>
+ <id>yt:channel:1kz7--4aWBsPaVsxjELNaw</id>
+ <yt:channelId>1kz7--4aWBsPaVsxjELNaw</yt:channelId>
+ <title>Bells of the Rockies</title>
+ <link rel="alternate" href="https://www.youtube.com/channel/UC1kz7--4aWBsPaVsxjELNaw"/>
+ <author>
+  <name>Bells of the Rockies</name>
+  <uri>https://www.youtube.com/channel/UC1kz7--4aWBsPaVsxjELNaw</uri>
+ </author>
+ <published>2022-01-01T18:37:31+00:00</published>
+ <entry>
+  <id>yt:video:FQjDe-Hwz3A</id>
+  <yt:videoId>FQjDe-Hwz3A</yt:videoId>
+  <yt:channelId>UC1kz7--4aWBsPaVsxjELNaw</yt:channelId>
+  <title>Still, Still, Still arr. Cathy Moklebust</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=FQjDe-Hwz3A"/>
+  <author>
+   <name>Bells of the Rockies</name>
+   <uri>https://www.youtube.com/channel/UC1kz7--4aWBsPaVsxjELNaw</uri>
+  </author>
+  <published>2022-12-20T21:01:06+00:00</published>
+  <updated>2026-05-05T11:30:49+00:00</updated>
+  <media:group>
+   <media:title>Still, Still, Still arr. Cathy Moklebust</media:title>
+   <media:content url="https://www.youtube.com/v/FQjDe-Hwz3A?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/FQjDe-Hwz3A/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Bells of the Rockies Winter 2022 Concert</media:description>
+   <media:community>
+    <media:starRating count="0" average="0.00" min="1" max="5"/>
+    <media:statistics views="131"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:E4eXynfHj_4</id>
+  <yt:videoId>E4eXynfHj_4</yt:videoId>
+  <yt:channelId>UC1kz7--4aWBsPaVsxjELNaw</yt:channelId>
+  <title>Sing We Now of Christmas</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=E4eXynfHj_4"/>
+  <author>
+   <name>Bells of the Rockies</name>
+   <uri>https://www.youtube.com/channel/UC1kz7--4aWBsPaVsxjELNaw</uri>
+  </author>
+  <published>2022-01-01T19:05:02+00:00</published>
+  <updated>2026-05-28T17:50:42+00:00</updated>
+  <media:group>
+   <media:title>Sing We Now of Christmas</media:title>
+   <media:content url="https://www.youtube.com/v/E4eXynfHj_4?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/E4eXynfHj_4/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Sing We Now of Christmas arr. Kevin McChesney
+2021 Winter Concert</media:description>
+   <media:community>
+    <media:starRating count="0" average="0.00" min="1" max="5"/>
+    <media:statistics views="115"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:GOcqeK9295o</id>
+  <yt:videoId>GOcqeK9295o</yt:videoId>
+  <yt:channelId>UC1kz7--4aWBsPaVsxjELNaw</yt:channelId>
+  <title>Jingle Bells</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=GOcqeK9295o"/>
+  <author>
+   <name>Bells of the Rockies</name>
+   <uri>https://www.youtube.com/channel/UC1kz7--4aWBsPaVsxjELNaw</uri>
+  </author>
+  <published>2022-01-01T19:03:12+00:00</published>
+  <updated>2026-04-28T18:05:45+00:00</updated>
+  <media:group>
+   <media:title>Jingle Bells</media:title>
+   <media:content url="https://www.youtube.com/v/GOcqeK9295o?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i4.ytimg.com/vi/GOcqeK9295o/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Jingle Bells arr. David R. Kent</media:description>
+   <media:community>
+    <media:starRating count="1" average="5.00" min="1" max="5"/>
+    <media:statistics views="366"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:5Zw37EsBBnU</id>
+  <yt:videoId>5Zw37EsBBnU</yt:videoId>
+  <yt:channelId>UC1kz7--4aWBsPaVsxjELNaw</yt:channelId>
+  <title>Christmas Kaleidoscope</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=5Zw37EsBBnU"/>
+  <author>
+   <name>Bells of the Rockies</name>
+   <uri>https://www.youtube.com/channel/UC1kz7--4aWBsPaVsxjELNaw</uri>
+  </author>
+  <published>2022-01-01T18:42:24+00:00</published>
+  <updated>2026-05-19T20:02:15+00:00</updated>
+  <media:group>
+   <media:title>Christmas Kaleidoscope</media:title>
+   <media:content url="https://www.youtube.com/v/5Zw37EsBBnU?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/5Zw37EsBBnU/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Christmas Kaleidoscope arr. Sondra Tucker
+2021 Winter Concert</media:description>
+   <media:community>
+    <media:starRating count="1" average="5.00" min="1" max="5"/>
+    <media:statistics views="171"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:1ymVadt53WM</id>
+  <yt:videoId>1ymVadt53WM</yt:videoId>
+  <yt:channelId>UC1kz7--4aWBsPaVsxjELNaw</yt:channelId>
+  <title>Stille Nacht</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=1ymVadt53WM"/>
+  <author>
+   <name>Bells of the Rockies</name>
+   <uri>https://www.youtube.com/channel/UC1kz7--4aWBsPaVsxjELNaw</uri>
+  </author>
+  <published>2022-01-01T18:39:24+00:00</published>
+  <updated>2026-04-28T19:56:11+00:00</updated>
+  <media:group>
+   <media:title>Stille Nacht</media:title>
+   <media:content url="https://www.youtube.com/v/1ymVadt53WM?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/1ymVadt53WM/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Stille Nacht arr. Betty Garee
+Winter 2021 Concert</media:description>
+   <media:community>
+    <media:starRating count="1" average="5.00" min="1" max="5"/>
+    <media:statistics views="92"/>
+   </media:community>
+  </media:group>
+ </entry>
+</feed>

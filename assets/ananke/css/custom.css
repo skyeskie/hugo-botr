@@ -30,11 +30,26 @@ h3.left + p {
     margin-top: 3em;
 }
 
-.yt-half {
+.youtube-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.youtube-grid div, .youtube-full {
+    position: relative;
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
+}
+
+.youtube-grid div iframe, .youtube-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .clear {
