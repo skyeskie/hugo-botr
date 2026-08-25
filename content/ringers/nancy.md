@@ -1,10 +1,10 @@
-+++
-title = 'Nancy Schmidt'
-sort = 'Schmidt'
-photo = 'nancy-2025-edit.jpg'
-director = false
-weight = 46
-+++
+---
+title: 'Nancy Schmidt'
+sort: 'Schmidt'
+photo: 'nancy-2025-edit.jpg'
+director: false
+weight: 46
+---
 
 Nancy first learned of handbells when she saw a handbell choir ringing during a worship service, and so she joined the
 church and joined the handbell choir. That was decades ago, and she has enjoyed ringing ever since. Nancy is a founding

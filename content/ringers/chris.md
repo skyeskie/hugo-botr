@@ -1,10 +1,10 @@
-+++
-title = 'Chris Vickers'
-sort = 'Vickers'
-photo = 'chris_1.jpg'
-director = false
-weight = 49
-+++
+---
+title: 'Chris Vickers'
+sort: 'Vickers'
+photo: 'chris_1.jpg'
+director: false
+weight: 49
+---
 
 Chris Vickers has been a ringer with Bells of the Rockies since 1999. Her music minor from the University of Wisconsin -
 River Falls includes tons of experience playing saxophone in quartet ensemble, marching band, concert band, and jazz

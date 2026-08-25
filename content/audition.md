@@ -1,8 +1,8 @@
-+++
-title = "Audition Information for Bells of the Rockies"
-featured_image = '/images/bg-handbells.jpg'
-header_section_class = 'tc-l pv2 ph3 ph4-ns fw6'
-+++
+---
+title: "Audition Information for Bells of the Rockies"
+featured_image: '/images/bg-handbells.jpg'
+header_section_class: 'tc-l pv2 ph3 ph4-ns fw6'
+---
 
 **We have enough ringers at this time. Next auditions will be held in May 2027.**
 {.full-ringers}

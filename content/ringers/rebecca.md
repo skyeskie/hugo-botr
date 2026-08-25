@@ -1,10 +1,10 @@
-+++
-title = 'Rebecca Gilmore'
-sort = 'Gilmore'
-photo = 'rebeccagilmore_orig.webp'
-director = false
-weight = 51
-+++
+---
+title: 'Rebecca Gilmore'
+sort: 'Gilmore'
+photo: 'rebeccagilmore_orig.webp'
+director: false
+weight: 51
+---
 
 Rebecca Gilmore joined Bells of the Rockies in 2026 and has been playing in bell choirs since 2003. In addition to
 playing bells, Rebecca also enjoys singing in choir and playing percussion in her church’s orchestra.

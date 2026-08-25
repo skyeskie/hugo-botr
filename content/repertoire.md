@@ -1,7 +1,7 @@
-+++
-title = 'Repertoire'
-featured_image = '/images/bg-chimes.jpg'
-+++
+---
+title: 'Repertoire'
+featured_image: '/images/bg-chimes.jpg'
+---
 
 **Just a sample of past performances from your favorite handbells choir...**
 

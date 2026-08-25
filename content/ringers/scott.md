@@ -1,10 +1,10 @@
-+++
-title = 'Scott Yeskie'
-sort = 'Yeskie'
-photo = 'scottyeskie_orig.webp'
-director = false
-weight = 56
-+++
+---
+title: 'Scott Yeskie'
+sort: 'Yeskie'
+photo: 'scottyeskie_orig.webp'
+director: false
+weight: 56
+---
 
 Scott joined Bells of the Rockies in 2026. He has been ringing bells in various church choirs since 2002.
 

@@ -1,10 +1,10 @@
-+++
-title = 'Mary Krings'
-sort = 'Krings, M'
-photo = 'marykrings_orig.webp'
-director = false
-weight = 16
-+++
+---
+title: 'Mary Krings'
+sort: 'Krings, M'
+photo: 'marykrings_orig.webp'
+director: false
+weight: 16
+---
 
 Mary began ringing handbells in her church youth choir. She rediscovered her love of handbells as an adult and has
 enjoyed playing with her church bell choir along with her two children. She is excited to be a new member of Bells of

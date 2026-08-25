@@ -1,10 +1,10 @@
-+++
-title = 'Marshall Jones'
-sort = 'Jones'
-photo = 'marshalljones_orig.webp'
-director = false
-weight = 56
-+++
+---
+title: 'Marshall Jones'
+sort: 'Jones'
+photo: 'marshalljones_orig.webp'
+director: false
+weight: 56
+---
 
 Marshall Jones began directing and ringing handbells in 2003. He has been ringing and directing in most of the years
 since with the exception of time in grad school for degrees in composition.

@@ -1,9 +1,9 @@
-+++
-date = '2026-08-05T21:51:17-06:00'
-title = 'Sharon Schmidt'
-photo = 'sharon_1.jpg'
-director = true
-+++
+---
+date: '2026-08-05T21:51:17-06:00'
+title: 'Sharon Schmidt'
+photo: 'sharon_1.jpg'
+director: true
+---
 
 Sharon Schmidt became director of Bells of the Rockies in the fall of 2024 and has been involved in the handbell world
 since the 1970s. In 1992, she became a founding member of The Agape Ringers, an auditioned community handbell ensemble

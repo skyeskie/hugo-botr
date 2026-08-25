@@ -1,10 +1,10 @@
-+++
-title = 'Emily Bilek'
-sort = 'Bilek'
-photo = 'emily_1.jpg'
-director = false
-weight = 11
-+++
+---
+title: 'Emily Bilek'
+sort: 'Bilek'
+photo: 'emily_1.jpg'
+director: false
+weight: 11
+---
 
 Emily joined Bells of the Rockies in 2022. She has been ringing bells off and on since she was 9 years old in church
 choirs across the state, and is excited to be part of such an excellent choir!

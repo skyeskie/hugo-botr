@@ -1,10 +1,10 @@
-+++
-title = 'Amanda Silvestri'
-sort = 'Silvestri, A'
-photo = 'amanda_1.jpg'
-director = false
-weight = 33
-+++
+---
+title: 'Amanda Silvestri'
+sort: 'Silvestri, A'
+photo: 'amanda_1.jpg'
+director: false
+weight: 33
+---
 
 At the age of 13 Amanda began ringing in her first handbell choir. She has been ringing ever since. Amanda has directed
 both youth and adult church handbell choirs, and owns her own set of bells and chimes. She currently directs the

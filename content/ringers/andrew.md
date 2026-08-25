@@ -1,10 +1,10 @@
-+++
-title = 'Andrew Hudson'
-sort = 'Hudson'
-photo = 'andrew_1.jpg'
-director = false
-weight = 23
-+++
+---
+title: 'Andrew Hudson'
+sort: 'Hudson'
+photo: 'andrew_1.jpg'
+director: false
+weight: 23
+---
 
 Andrew Hudson joined Bells of the Rockies in 2015 but has been ringing handbells since 1991. It just took a little while
 to get here. Andrew loves ringing with this group, his church choir, and any ensemble he can convince to work together.

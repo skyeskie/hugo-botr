@@ -1,10 +1,10 @@
-+++
-title = 'Brandi Patrick'
-sort = 'Patrick'
-photo = 'brandi_2.jpg'
-director = false
-weight = 21
-+++
+---
+title: 'Brandi Patrick'
+sort: 'Patrick'
+photo: 'brandi_2.jpg'
+director: false
+weight: 21
+---
 
 A self-proclaimed musical nerd with the skills to play over fifteen instruments, Brandi has loved bells since the first
 time she played chimes her senior year of high school. Before ringing with the BotR, Brandi has rung with The

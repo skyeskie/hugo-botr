@@ -1,7 +1,7 @@
-+++
-Title = "How to Support Bells of the Rockies"
-featured_image = '/images/bg-handbells.jpg'
-+++
+---
+Title: "How to Support Bells of the Rockies"
+featured_image: '/images/bg-handbells.jpg'
+---
 
 ### Thank you Bells of the Rockies fans!
 Due to the generosity of our patrons we have purchased our own set of Schulmerich handbells. Thank you to everyone who

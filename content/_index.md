@@ -1,7 +1,7 @@
-+++
-title = "Bells of the Rockies"
-featured_image = "/images/home-right.jpg"
-+++
+---
+title: "Bells of the Rockies"
+featured_image: "/images/home-right.jpg"
+---
 
 {{< box-start "fl w-50-m w-50-l" >}}
 
