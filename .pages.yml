@@ -1,0 +1,66 @@
+media:
+  - name: images
+    label: Main Images
+    input: assets/images
+    output: /images
+  - name: ringers
+    label: Ringer Photos
+    input: assets/ringers
+    output: /ringers
+content:
+  - name: main
+    label: Main Pages
+    type: collection
+    path: content
+    subfolders: false
+    operations:
+      create: false
+      delete: false
+      rename: false
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        type: string
+      - name: featured_image
+        type: image
+        options:
+          media: images
+          rename: safe
+      - name: body
+        type: rich-text
+  - name: ringers
+    label: Ringer Bios
+    type: collection
+    path: content/ringers
+    subfolders: false
+    format: yaml-frontmatter
+    view:
+      fields: [title, director, sort, weight]
+      sort: [title, sort, weight]
+      default:
+        sort: sort
+        order: asc
+      layout: list
+    fields:
+      - name: title
+        label: Full Name
+        type: image
+      - name: photo
+        label: Ringer Photo
+        type: image
+        options:
+          media: ringers
+          rename: safe
+      - name: director
+        label: Director
+        type: boolean
+        default: false
+      - name: sort
+        label: Sort (by text)
+        type: string
+      - name: weight
+        label: Sort (numeric)
+        type: number
+      - name: body
+        type: rich-text
+    
