@@ -1,0 +1,77 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+app_title: Bells of the Rockies Admin
+
+backend:
+  name: github
+  repo: skyeskie/hugo-botr
+  branch: sveltia
+#  squash_merges: true
+#
+#publish_mode: editorial_workflow
+
+media_folder: assets/images
+public_folder: /images
+
+basic_fields: &basic_fields
+  fields:
+    - name: title
+    - name: featured_image
+      widget: image
+
+collections:
+  - name: main
+    label: Main Site Pages
+    files:
+      - name: index
+        label: Home Page
+        file: content/_index.md
+        <<: *basic_fields
+      - name: about
+        label: About Us
+        file: content/about-us.md
+        <<: *basic_fields
+      - name: audition
+        label: Audition
+        file: content/audition.md
+        <<: *basic_fields
+      - name: concerts
+        label: Concerts
+        file: content/concerts.md
+        <<: *basic_fields
+      - name: repertoire
+        label: Repertoire
+        file: content/repertoire.md
+        <<: *basic_fields
+      - name: support
+        label: Support
+        file: content/support.md
+        <<: *basic_fields
+      - name: ringers
+        label: Ringers
+        file: content/ringers/_index.md
+        <<: *basic_fields
+  - name: ringers
+    label: Ringer Bios
+    folder: content/ringers
+    media_folder: assets/ringers
+    public_folder: /ringers
+    fields:
+      - name: title
+        label: Full Name
+        widget: string
+      - name: photo
+        label: Ringer Photo
+        widget: image
+      - name: director
+        label: Director
+        widget: boolean
+        default: false
+      - name: sort
+        label: Sort (by text)
+        widget: string
+      - name: weight
+        label: Sort (numeric)
+        widget: number
+      - name: body
+        widget: rich-text

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Sveltia CMS</title>
+</head>
+<body>
+<script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+<script>
+    CMS.init({ config });
+    // from https://github.com/sharadcodes/hugo-shortcodes-netlify-cms/blob/master/src/youtube.js
+    CMS.registerEditorComponent({
+        id: "youtube",
+        label: "Youtube",
+        fields: [{
+            name: "id",
+            label: "Youtube Video ID",
+            widget: "string"
+        }],
+        pattern: /{{< youtube\s+(?<id>[A-Za-z0-9\-]+)\s+>}}/,
+        fromBlock: function(match) {
+            return {
+                id: match[1],
+            };
+        },
+        toBlock: function(obj) {
+            return `{{< youtube ${obj.id} >}}`;
+        },
+        toPreview: function(obj) {
+            return `<img src="https://i3.ytimg.com/vi/${obj.id}/hqdefault.jpg" alt="Youtube Video"/>`;
+        },
+    });
+
+    //TODO: Add form shortcode
+</script>
+
+</body>
+</html>
