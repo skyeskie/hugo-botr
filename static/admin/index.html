@@ -22,7 +22,7 @@
             label: "Whether to include ID prefix",
             widget: "hidden"
         }],
-        pattern: /{{< youtube\s+(?:id\s*=\s*)?(?<id>[A-Za-z0-9\-]+)\s+>}}/,
+        pattern: /{{< youtube\s+(?<pre>(?:id\s*=\s*)?)(?<id>[A-Za-z0-9\-_]+)\s+>}}/,
         fromBlock: function(match) {
             return match.groups;
         },
