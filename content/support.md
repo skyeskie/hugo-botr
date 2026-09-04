@@ -1,5 +1,5 @@
 ---
-Title: "How to Support Bells of the Rockies"
+title: "How to Support Bells of the Rockies"
 featured_image: '/images/bg-handbells.jpg'
 ---
 
