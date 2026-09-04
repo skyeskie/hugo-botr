@@ -13,6 +13,7 @@ backend:
 media_folder: assets/images
 public_folder: /images
 
+# noinspection YAMLSchemaValidation
 basic_fields: &basic_fields
   fields:
     - name: title
@@ -56,8 +57,12 @@ collections:
   - name: ringers
     label: Ringer Bios
     folder: content/ringers
-    media_folder: assets/ringers
+    media_folder: /assets/ringers
     public_folder: /ringers
+    sortable_fields:
+      fields: [title, weight, sort]
+      default:
+        field: weight
     fields:
       - name: title
         label: Full Name
