@@ -63,7 +63,8 @@ collections:
       fields: [title, weight, sort]
       default:
         field: weight
-    index_file: false
+    index_file:
+      name: "__DO_NOT_SHOW_INDEX_FILE"
     fields:
       - name: title
         label: Full Name
