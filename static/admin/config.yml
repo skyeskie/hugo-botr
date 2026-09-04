@@ -18,6 +18,8 @@ basic_fields: &basic_fields
     - name: title
     - name: featured_image
       widget: image
+    - name: body
+      widget: richtext
 
 collections:
   - name: main
@@ -74,4 +76,4 @@ collections:
         label: Sort (numeric)
         widget: number
       - name: body
-        widget: rich-text
+        widget: richtext
