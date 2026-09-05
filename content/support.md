@@ -4,16 +4,13 @@ featured_image: '/images/bg-handbells.jpg'
 ---
 
 ### Thank you Bells of the Rockies fans!
-Due to the generosity of our patrons we have purchased our own set of Schulmerich handbells. Thank you to everyone who
-previously gave to our fundraising campaign.
+Due to the generosity of our patrons we have purchased our own set of Schulmerich handbells. Thank you to everyone who previously gave to our fundraising campaign.
 { .tl }
 
 ---
 
 ## But wait! There's more.
-We continue to expand our set of bells and want to add those big bass bells which make our music richer and give it
-depth. One bell plus the case range cost upwards of $6,500. If you want to help us take one more step toward our goal,
-then donate via PayPal by clicking the link below or donate directly at one of our concerts.
+We continue to expand our set of bells and want to add those big bass bells which make our music richer and give it depth. One bell plus the case range cost upwards of $6,500. If you want to help us take one more step toward our goal, then donate via PayPal by clicking the link below or donate directly at one of our concerts.
 { .tl }
 
 If you donate a bell or set of bells, your name will be put on the bell cases and in our concert bulletins.
@@ -34,9 +31,7 @@ Need another option to donate besides an online donation? Please reach out to us
 ### King Soopers
 { .fl .f3 .fw6 .purple .pv0 .mv0 .mr3 }
 
-Make us your preferred organization for the King Soopers community rewards programs. Link our
-name--Bells of the Rockies-- to your King Soopers card and King Soopers will make a donation to us every quarter.
-Register your card online and link our name at www.kingsoopers.com/communityrewards.
+Make us your preferred organization for the King Soopers community rewards programs. Link our name--Bells of the Rockies-- to your King Soopers card and King Soopers will make a donation to us every quarter. Register your card online and link our name at www.kingsoopers.com/communityrewards.
 { .tl .mt1 .pt1 .fw5 }
 
 {{< column >}}

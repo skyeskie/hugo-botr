@@ -29,3 +29,5 @@ markup:
         useEmbedded: fallback
       link:
         useEmbedded: fallback
+    renderer:
+      hardWraps: true

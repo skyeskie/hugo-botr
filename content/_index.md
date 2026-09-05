@@ -26,9 +26,7 @@ featured_image: "/images/home-right.jpg"
 ### We are committed to excellence in musical performances.
 { .fl .w-third-l .tl }
 
-If you are looking for quality in handbell performances, you've found the right group. Serving Northern Colorado,
-Wyoming, and surrounding areas in a variety of settings, Bells of the Rockies performs concerts, delivers workshops,
-performs or accompanies at weddings and receptions, and many other custom settings.
+If you are looking for quality in handbell performances, you've found the right group. Serving Northern Colorado, Wyoming, and surrounding areas in a variety of settings, Bells of the Rockies performs concerts, delivers workshops, performs or accompanies at weddings and receptions, and many other custom settings.
 { .fl .w-two-thirds-l .tl }
 
 ![group photo](/images/groupphoto3_orig.webp)
