@@ -64,9 +64,11 @@ collections:
       default:
         field: sort
     index_file:
-      name: '_index'
       label: 'Ringers Index Description'
       <<: *basic_fields
+    view_groups:
+      - field: director
+        label: Director
     fields:
       - name: first
         label: First Name
