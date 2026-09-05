@@ -67,8 +67,11 @@ collections:
       label: 'Ringers Index Description'
       <<: *basic_fields
     view_groups:
-      - field: director
+      groups:
+      - name: director
+        field: director
         label: Director
+      default: director
     fields:
       - name: first
         label: First Name
