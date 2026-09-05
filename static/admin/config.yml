@@ -62,10 +62,10 @@ collections:
     sortable_fields:
       fields: [title, weight, sort]
       default:
-        field: weight
+        field: sort
     index_file:
-      name: "_index"
-      label: "Ringers Index Description"
+      name: '_index'
+      label: 'Ringers Index Description'
       <<: *basic_fields
     fields:
       - name: first
@@ -78,9 +78,6 @@ collections:
         label: Full Name
         widget: compute
         value: '{{fields.first}} {{fields.last}}'
-      - name: photo
-        label: Ringer Photo
-        widget: image
       - name: director
         label: Director
         widget: boolean
@@ -90,10 +87,13 @@ collections:
       - name: sort
         label: Sort (by text)
         widget: compute
-        value: '{{fields.last}} {{fields.first}}'
+        value: '{{fields.last}}, {{fields.first}}'
       - name: weight
         hint: 'Deprecated if use alpha sort'
         label: Sort (numeric)
         widget: number
+      - name: photo
+        label: Ringer Photo
+        widget: image
       - name: body
         widget: richtext
