@@ -1,6 +1,8 @@
 ---
+first: 'Nancy'
+last: 'Schmidt'
 title: 'Nancy Schmidt'
-sort: 'Schmidt'
+sort: 'Schmidt, Nancy'
 photo: 'nancy-2025-edit.jpg'
 director: false
 weight: 46

@@ -1,6 +1,8 @@
 ---
+first: 'Rebecca'
+last: 'Gilmore'
 title: 'Rebecca Gilmore'
-sort: 'Gilmore'
+sort: 'Gilmore, Rebecca'
 photo: 'rebeccagilmore_orig.webp'
 director: false
 weight: 51

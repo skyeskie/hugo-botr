@@ -1,6 +1,8 @@
 ---
-date: '2026-08-05T21:51:17-06:00'
+first: 'Sharon'
+last: 'Schmidt'
 title: 'Sharon Schmidt'
+sort: 'Schmidt, Sharon'
 photo: 'sharon_1.jpg'
 director: true
 ---

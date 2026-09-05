@@ -1,6 +1,8 @@
 ---
+first: 'Brandi'
+last: 'Patrick'
 title: 'Brandi Patrick'
-sort: 'Patrick'
+sort: 'Patrick, Brandi'
 photo: 'brandi_2.jpg'
 director: false
 weight: 21

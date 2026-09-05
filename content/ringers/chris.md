@@ -1,6 +1,8 @@
 ---
+first: 'Chris'
+last: 'Vickers'
 title: 'Chris Vickers'
-sort: 'Vickers'
+sort: 'Vickers, Chris'
 photo: 'chris_1.jpg'
 director: false
 weight: 49

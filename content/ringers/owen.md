@@ -1,6 +1,8 @@
 ---
+first: 'Owen'
+last: 'Krings'
 title: 'Owen Krings'
-sort: 'Krings, O'
+sort: 'Krings, Owen'
 photo: 'owenkrings_orig.webp'
 director: false
 weight: 19

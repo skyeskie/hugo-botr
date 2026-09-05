@@ -1,6 +1,8 @@
 ---
+first: 'Catie'
+last: 'Jackson'
 title: 'Catie Jackson'
-sort: 'Jackson'
+sort: 'Jackson, Catie'
 photo: 'catie_1.jpg'
 director: false
 weight: 31

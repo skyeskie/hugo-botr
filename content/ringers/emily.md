@@ -1,6 +1,8 @@
 ---
+first: 'Emily'
+last: 'Bilek'
 title: 'Emily Bilek'
-sort: 'Bilek'
+sort: 'Bilek, Emily'
 photo: 'emily_1.jpg'
 director: false
 weight: 11

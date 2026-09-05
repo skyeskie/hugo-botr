@@ -1,6 +1,8 @@
 ---
+first: 'Kathryn'
+last: 'Rudd'
 title: 'Kathryn Rudd'
-sort: 'Rudd'
+sort: 'Rudd, Kathryn'
 photo: 'kathryn_1.jpg'
 director: false
 weight: 29

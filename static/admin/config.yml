@@ -64,11 +64,18 @@ collections:
       default:
         field: weight
     index_file:
-      name: "__DO_NOT_SHOW_INDEX_FILE"
+      name: "director"
     fields:
+      - name: first
+        label: First Name
+        widget: string
+      - name: last
+        label: Last Name
+        widget: string
       - name: title
         label: Full Name
-        widget: string
+        widget: compute
+        value: '{{fields.first}} {{field.last}}'
       - name: photo
         label: Ringer Photo
         widget: image
@@ -76,10 +83,14 @@ collections:
         label: Director
         widget: boolean
         default: false
+        readonly: true
+        preview: false
       - name: sort
         label: Sort (by text)
-        widget: string
+        widget: compute
+        value: '{{fields.last}} {{field.first}}'
       - name: weight
+        hint: 'Deprecated if use alpha sort'
         label: Sort (numeric)
         widget: number
       - name: body

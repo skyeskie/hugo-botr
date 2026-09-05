@@ -1,6 +1,8 @@
 ---
+first: 'Mary'
+last: 'Krings'
 title: 'Mary Krings'
-sort: 'Krings, M'
+sort: 'Krings, Mary'
 photo: 'marykrings_orig.webp'
 director: false
 weight: 16

@@ -1,6 +1,8 @@
 ---
+first: 'Andrew'
+last: 'Hudson'
 title: 'Andrew Hudson'
-sort: 'Hudson'
+sort: 'Hudson, Andrew'
 photo: 'andrew_1.jpg'
 director: false
 weight: 23

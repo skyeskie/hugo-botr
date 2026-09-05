@@ -1,6 +1,8 @@
 ---
+first: 'Amanda'
+last: 'Silvestri'
 title: 'Amanda Silvestri'
-sort: 'Silvestri, A'
+sort: 'Silvestri, Amanda'
 photo: 'amanda_1.jpg'
 director: false
 weight: 33

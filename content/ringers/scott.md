@@ -1,6 +1,8 @@
 ---
+first: 'Scott'
+last: 'Yeskie'
 title: 'Scott Yeskie'
-sort: 'Yeskie'
+sort: 'Yeskie, Scott'
 photo: 'scottyeskie_orig.webp'
 director: false
 weight: 56

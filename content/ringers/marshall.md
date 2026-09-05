@@ -1,6 +1,8 @@
 ---
+first: 'Marshall'
+last: 'Jones'
 title: 'Marshall Jones'
-sort: 'Jones'
+sort: 'Jones, Marshall'
 photo: 'marshalljones_orig.webp'
 director: false
 weight: 56

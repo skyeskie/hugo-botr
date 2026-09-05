@@ -1,6 +1,8 @@
 ---
+first: 'Kayla'
+last: 'Carlisle'
 title: 'Kayla Carlisle'
-sort: 'Carlisle'
+sort: 'Carlisle, Kayla'
 photo: 'kayla_1.jpg'
 director: false
 weight: 39
