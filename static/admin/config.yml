@@ -105,6 +105,7 @@ collections:
   - name: locations
     label: Concert Locations
     folder: content/locations
+    summary: '{{title}} ({{city}})'
     fields:
 #      - name: id
 #        label: Location ID
@@ -127,6 +128,10 @@ collections:
       - name: state
         label: State Code
         maxlength: 2
+        widget: string
+      - name: short
+        label: Short Unique Description
+        hint: City or Abbreviation
         widget: string
 #      - name: address2
 #        widget: compute
@@ -168,10 +173,12 @@ collections:
     folder: content/concerts
     media_folder: /assets/concerts
     public_folder: /concerts
+    summary: '{{year | }} {{season}} {{Extra}} - {{title}}'
     sortable_fields:
       fields: [title, sort]
       default:
         field: sort
+        direction: descending
     fields:
       - name: year
         label: Year
@@ -213,14 +220,21 @@ collections:
         fields:
           - name: date
             widget: datetime
-            type: datetime-local
+            type: date
+          - name: time
+            widget: datetime
+            type: time
+            required: false
+            default: "16:00"
             step: 300
           - name: location
             widget: relation
+            value_field: short
             collection: locations
       - name: selections
         label: Music Selections
         widget: list
+        required: false
         fields:
           - name: song
             label: Song
@@ -244,9 +258,7 @@ collections:
             fields:
               - name: performance
                 label: Concert Date
-                comment: Reference dates above
-                # TODO: Ref dates above
-                widget: string
+                widget: concert-select
                 required: false # For now
               - name: youtube
                 label: YouTube ID
@@ -255,4 +267,5 @@ collections:
                 label: Publish After
                 widget: datetime
                 type: date
+                required: false
                 comment: Use to delay when release. Will require rebuild.

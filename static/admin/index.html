@@ -7,6 +7,7 @@
 </head>
 <body>
 <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 <script>
     // from https://github.com/sharadcodes/hugo-shortcodes-netlify-cms/blob/master/src/youtube.js
     CMS.registerEditorComponent({
@@ -33,7 +34,25 @@
             return `<img src="https://i3.ytimg.com/vi/${obj.id}/hqdefault.jpg" alt="Youtube Video"/>`;
         },
     });
-
+    const SelectControl = CMS.getFieldType('select').control;
+    const ConcertSelectControl = createClass({
+        render: function() {
+            const dates = this.props.entry.getIn(['data', 'dates'])
+            console.log(this.props);
+            const options = (dates?.toJS() ?? [])
+                .map((d) => dayjs(d.date).format('MMM D ') + d.location)
+                .filter((d) => !!d)
+                .map((d) => ({label: d, value: d }));
+            console.log(options);
+            return h(SelectControl, {
+                field: { name: this.props.field.get('name'), options },
+                value: this.props.value,
+                forID: this.props.forID,
+                onChange: this.props.onChange,
+            })
+        }
+    })
+    CMS.registerFieldType('concert-select', ConcertSelectControl);
     //TODO: Add form shortcode
 </script>
 
