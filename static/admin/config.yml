@@ -128,11 +128,9 @@ collections:
         label: State Code
         maxlength: 2
         widget: string
-      - name: zip
-        label: Zip Code
-        widget: number
-      - name: address2
-        widget: '{fields.city}, {fields.state} {fields.zip}'
+#      - name: address2
+#        widget: compute
+#        value: '{{fields.street}} | {{fields.city}}, {{fields.state}}'
   - name: repertoire
     label: Repertoire Pieces
     folder: content/repertoire
