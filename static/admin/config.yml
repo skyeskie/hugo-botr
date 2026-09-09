@@ -102,3 +102,159 @@ collections:
         widget: image
       - name: body
         widget: richtext
+  - name: locations
+    label: Concert Locations
+    folder: content/locations
+    fields:
+      - name: id
+        label: Location ID
+        hint: Internal use for references
+        widget: string
+        required: true
+      - name: title
+        label: Display Name
+        widget: string
+        required: true
+      - name: image
+        widget: image
+        required: false
+      - name: street
+        label: Street Address
+        widget: string
+      - name: city
+        label: City
+        widget: string
+      - name: state
+        label: State Code
+        maxlength: 2
+        widget: string
+      - name: zip
+        label: Zip Code
+        widget: number
+      - name: address2
+        widget: '{fields.city}, {fields.state} {fields.zip}'
+  - name: repertoire
+    label: Repertoire Pieces
+    folder: content/repertoire
+    fields:
+      - name: id
+        label: Piece ID # Filename?
+        widget: string
+        required: true
+      - name: title
+        label: Piece Title
+        widget: string
+        required: true
+      - name: composer
+        label: Composer
+        widget: list
+        min: 1
+        hint: If unknown, use appropriate generic (Spiritual)
+      - name: arranger
+        label: Arranger
+        comment: "arr. "
+        required: false
+      - name: adapter
+        label: Adapted By
+        required: false
+      - name: sheet_music
+        label: Music URL
+        widget: string
+        required: false
+      - name: body
+        label: Extra Info
+        comment: Lyrics, concert notes?
+        required: false
+  - name: concerts
+    label: Concerts
+    folder: content/concerts
+    media_folder: /assets/concerts
+    public_folder: /concerts
+    sortable_fields:
+      fields: [title, sort]
+      default:
+        field: sort
+    fields:
+      - name: year
+        label: Year
+        widget: number
+        min: 1996
+        max: 2100
+      - name: season
+        label: Season/Month
+        widget: string
+      - name: poster
+        label: Promotional Poster
+        widget: image
+        required: false
+      - name: logo
+        label: Concert Logo
+        comment: Should be similar to poster, without text details
+        widget: image
+        required: false
+      - name: extra
+        label: Extra Description
+        hint: "Ex: Area 11 Festival. Usually blank"
+        required: false
+        # TODO: See if can calculate sort string
+      - name: sort
+        label: Sort String
+        hint: Should force to roughly time order
+        widget: string
+      - name: title
+        label: Program Title
+        widget: string
+      - name: body
+        label: Page Description
+        widget: richtext
+        required: false
+      - name: dates
+        label: Concert Dates
+        widget: list
+        min: 1
+        fields:
+          - name: date
+            widget: datetime
+            type: datetime-local
+            step: 300
+          - name: location
+            widget: relation
+            collection: locations
+      - name: selections
+        label: Music Selections
+        widget: list
+        fields:
+          - name: song
+            label: Song
+            widget: relation
+            collection: repertoire
+          - name: subtitle
+            label: Subtitle
+            comment: Concert-specific subtitle (Wonder)
+            widget: string
+            required: false
+          - name: instrumentalists
+            label: Instrumentalists
+            required: false
+            widget: keyvalue
+            key_label: Instrument
+            value_label: Player
+          - name: videos
+            label: YouTube Videos
+            widget: list
+            required: false
+            fields:
+              - name: performance
+                label: Concert Date
+                comment: Reference dates above
+                # TODO: Ref dates above
+                widget: string
+                required: false # For now
+              - name: youtube
+                label: YouTube ID
+                required: true
+              - name: public_after
+                label: Publish After
+                widget: datetime
+                type: date
+                comment: Use to delay when release. Will require rebuild.
