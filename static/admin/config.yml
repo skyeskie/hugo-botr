@@ -106,11 +106,11 @@ collections:
     label: Concert Locations
     folder: content/locations
     fields:
-      - name: id
-        label: Location ID
-        hint: Internal use for references
-        widget: string
-        required: true
+#      - name: id
+#        label: Location ID
+#        hint: Internal use for references
+#        widget: string
+#        required: true
       - name: title
         label: Display Name
         widget: string
