@@ -236,21 +236,56 @@ collections:
         widget: list
         required: false
         fields:
-          - name: song
-            label: Song
-            widget: relation
-            collection: repertoire
           - name: subtitle
             label: Subtitle
             comment: Concert-specific subtitle (Wonder)
             widget: string
             required: false
+          - name: song
+            label: Song
+            widget: relation
+            collection: repertoire
           - name: instrumentalists
             label: Instrumentalists
             required: false
             widget: keyvalue
             key_label: Instrument
             value_label: Player
+  - name: youtube
+    label: Concert Videos
+    folder: content/concerts
+    media_folder: /assets/concerts
+    public_folder: /concerts
+    summary: '{{year | }} {{season}} {{Extra}} - {{title}}'
+    sortable_fields:
+      fields: [title, sort]
+      default:
+        field: sort
+        direction: descending
+    fields:
+      - name: sort
+        label: Sort String
+        widget: hidden
+      - name: title
+        label: Program Title
+        widget: hidden
+      - name: public_after
+        label: Publish After
+        widget: datetime
+        type: date
+        required: false
+        comment: Use to delay when release. Will require rebuild.
+      - name: selections
+        label: Music Selections
+        widget: list
+        readonly: true
+        required: false
+        fields:
+          - name: song
+            label: Song
+            widget: relation
+            collection: repertoire
+            readonly: true
           - name: videos
             label: YouTube Videos
             widget: list
@@ -263,9 +298,3 @@ collections:
               - name: youtube
                 label: YouTube ID
                 required: true
-              - name: public_after
-                label: Publish After
-                widget: datetime
-                type: date
-                required: false
-                comment: Use to delay when release. Will require rebuild.
