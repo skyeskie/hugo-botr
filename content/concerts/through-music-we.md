@@ -10,54 +10,55 @@ dates:
   - date: 2026-05-02
     time: 16:00
     location: OSLC
-    key: ''
+  - date: 2026-05-03
+    time: 16:00
+    location: MVPC
 selections:
-  - song: sogno-di-volare
-    subtitle: Dream
-    videos:
-      - performance: May 2 OSLC
-        youtube: TEST
-        public_after: ''
+  - subtitle: Dream
+    song: sogno-di-volare
     instrumentalists:
       Keyboard: Marshall Jones
       Percussion: Keaton Michel and Joanna Silvestri
-  - song: finlandia
-    subtitle: Unite
-    videos: []
+    videos:
+      - performance: May 2 OSLC
+        youtube: TEST
+  - subtitle: Unite
+    song: finlandia
     instrumentalists: null
-  - song: poor-wayfaring-stranger
-    subtitle: Lament
     videos: []
+  - subtitle: Lament
+    song: poor-wayfaring-stranger
     instrumentalists:
       Alto Saxophone: Brandi Patrick
-  - song: exultate
-    subtitle: Rejoice
     videos: []
+  - subtitle: Rejoice
+    song: exultate
     instrumentalists: null
-  - song: song-of-peace
-    subtitle: Experience Peace
     videos: []
+  - subtitle: Experience Peace
+    song: song-of-peace
     instrumentalists: null
-  - song: may-it-be
-    subtitle: Believe
     videos: []
+  - subtitle: Believe
+    song: may-it-be
     instrumentalists:
       Vocalist: Amanda Silvestri
-  - song: colorado-mountaintop
-    subtitle: Imagine Nature
     videos: []
+  - subtitle: Imagine Nature
+    song: colorado-mountaintop
     instrumentalists: null
-  - song: firework
-    subtitle: Dance
     videos: []
+  - subtitle: Dance
+    song: firework
     instrumentalists:
       Electric Bass: Calvin Long
       Electric Guitar: Joanna Silvestri
       Keyboard: Marshall Jones
       Percussion: Keaton Michel and Rebecca Gilmore
-  - song: carnivale
-    subtitle: Laugh
     videos: []
+  - subtitle: Laugh
+    song: carnivale
     instrumentalists:
       Percussion: Keaton Michel and Kathryn Rudd
+    videos: []
 ---
