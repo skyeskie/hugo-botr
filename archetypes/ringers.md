@@ -1,4 +1,6 @@
 ---
+first: '{{ replace .File.ContentBaseName "-" " " | title }}'
+last: ''
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 sort: 'Last, First'
 photo: '_default.jpg'
