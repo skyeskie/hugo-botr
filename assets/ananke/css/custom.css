@@ -88,3 +88,79 @@ h3.left + p {
         clear: both;
     }
 }
+
+/*
+ *  Button Link
+ */
+a.button {
+    font-weight: bold;
+    font-family: helvetica neue,helvetica,sans-serif;
+    display: inline-block;
+    background-color: #262a2b;
+    padding: 0.5rem 1rem;
+    border: 1px #555 solid;
+    border-radius: 9999px;
+    text-decoration: none;
+    color: rgba(232, 230, 227, 0.9);
+}
+
+a.button:hover {
+    color: #ffffff;
+    background-color: #090909;
+}
+
+
+/*
+ *  Image Alignment
+ */
+
+/*Left Align Images*/
+:is(.img-left1, .img-left2, .img-left3, .img-left4, .img-left5) {
+    width: 47%;
+    padding-right: 5px;
+    float: left;
+}
+
+:is(.img-left1, .img-left2, .img-left3, .img-left4, .img-left5) img {
+    width: 100%;
+}
+
+:is(.img-left1, .img-left2, .img-left3, .img-left4, .img-left5) + p,
+:is(.img-left2, .img-left3, .img-left4, .img-left5) + p + p,
+:is(.img-left3, .img-left4, .img-left5) + p + p + p,
+:is(.img-left4, .img-left5) + p + p + p + p,
+:is(.img-left5) + p + p + p + p + p {
+    width: 47%;
+    padding-left: 5px;
+    float: right;
+}
+
+/* Right align images */
+:is(.img-right1, .img-right2, .img-right3, .img-right4, .img-right5) {
+    width: 47%;
+    padding-left: 5px;
+    float: right;
+}
+
+:is(.img-right1, .img-right2, .img-right3, .img-right4, .img-right5) img {
+    width: 100%;
+}
+
+:is(.img-right1, .img-right2, .img-right3, .img-right4, .img-right5) + p,
+:is(.img-right2, .img-right3, .img-right4, .img-right5) + p + p,
+:is(.img-right3, .img-right4, .img-right5) + p + p + p,
+:is(.img-right4, .img-right5) + p + p + p + p,
+:is(.img-right5) + p + p + p + p + p {
+    width: 47%;
+    padding-right: 5px;
+    float: left;
+}
+
+/* CLEAR after requisite number of paragraphs */
+:is(.img-left1, .img-right1) + * + *,
+:is(.img-left2, .img-right2) + * + * + *,
+:is(.img-left3, .img-right3) + * + * + * + *,
+:is(.img-left4, .img-right4) + * + * + * + * + *,
+:is(.img-left5, .img-right5) + * + * + * + * + * + * {
+    clear: both;
+}

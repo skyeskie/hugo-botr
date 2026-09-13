@@ -1,6 +1,6 @@
 ---
-title: 'Concerts'
-featured_image: '/images/bg-handbells.jpg'
+title: Concerts
+featured_image: /images/bg-handbells.jpg
 ---
 
 ## December Concerts

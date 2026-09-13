@@ -1,0 +1,9 @@
+{{- $align := .Get "align" | default "fill" -}}
+{{- $src := .Get "src" | default "#" -}}
+{{- $paragraphs := .Get "paragraphs" | default 1 -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- if ne $align "fill" -}}
+<img src="{{ $src }}" alt="{{ $alt }}" class="img-{{ $align }}{{ $paragraphs }}" />
+{{- else -}}
+<img src="{{ $src }}" alt="{{ $alt }}" />
+{{- end -}}
