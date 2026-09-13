@@ -3,6 +3,7 @@ title: Concerts
 featured_image: /images/bg-handbells.jpg
 ---
 
+{{< center >}}
 ## December Concerts
 
 Bring your family and friends and enjoy festive music!
@@ -15,3 +16,4 @@ Sunday, December 13, 2026
 
 Saturday, December 19, 2026
 Time and Location TBD
+{{< /center >}}

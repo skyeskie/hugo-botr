@@ -41,13 +41,15 @@ h3.left + p {
     clear: both;
 }
 
-.full-ringers {
-    color: #FFCCCC;
-    text-align: center;
-    font-weight: bold;
+p, div {
+    text-align: left;
 }
 
-.center {
+.center, div.center, p.center, div.tc, p.tc, .tc p, .tc div {
+    text-align: center;
+}
+
+td, th {
     text-align: center;
 }
 
@@ -70,7 +72,9 @@ h3.left + p {
     font-weight: bolder;
 }
 
-/* Home Page */
+/*
+ *  Home Page
+ */
 @media screen and (min-width: 600px){
     article div.home-article :where(h2, h3, h4) {
         float: left;
@@ -87,6 +91,29 @@ h3.left + p {
     article div.home-article :where(h2, h3, h4) + p + p {
         clear: both;
     }
+}
+
+/*
+ *  Callout Widgets
+ */
+.full-ringers, .callout {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 0.4rem 2rem;
+}
+
+.full-ringers {
+    display: block;
+    color: #FFCCCC;
+    text-align: center;
+    font-weight: bold;
+}
+
+.callout {
+    background-color: #777777;
+    border: 1px #555 solid;
+    border-radius: 9999px;
+    color: rgba(232, 230, 227, 0.9);
 }
 
 /*
@@ -116,7 +143,7 @@ a.button:hover {
 
 /*Left Align Images*/
 :is(.img-left1, .img-left2, .img-left3, .img-left4, .img-left5) {
-    width: 47%;
+    width: 50%;
     padding-right: 5px;
     float: left;
 }
@@ -130,14 +157,14 @@ a.button:hover {
 :is(.img-left3, .img-left4, .img-left5) + p + p + p,
 :is(.img-left4, .img-left5) + p + p + p + p,
 :is(.img-left5) + p + p + p + p + p {
-    width: 47%;
+    width: 50%;
     padding-left: 5px;
     float: right;
 }
 
 /* Right align images */
 :is(.img-right1, .img-right2, .img-right3, .img-right4, .img-right5) {
-    width: 47%;
+    width: 50%;
     padding-left: 5px;
     float: right;
 }
@@ -151,7 +178,7 @@ a.button:hover {
 :is(.img-right3, .img-right4, .img-right5) + p + p + p,
 :is(.img-right4, .img-right5) + p + p + p + p,
 :is(.img-right5) + p + p + p + p + p {
-    width: 47%;
+    width: 50%;
     padding-right: 5px;
     float: left;
 }

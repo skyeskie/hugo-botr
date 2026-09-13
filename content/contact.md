@@ -1,24 +1,20 @@
 ---
-Title: "Contact Bells of the Rockies"
-featured_image: '/images/bg-handbells.jpg'
+title: Contact Bells of the Rockies
+featured_image: /images/bg-handbells.jpg
 ---
 
-Email us at {{< br >}}
+{{< center >}}
+Email us at
 bellsoftherockies1996@gmail.com
-{ .center }
+{{< /center >}}
 
-{{< columns >}}
-
-
+{{<columns>}}
 Facebook
 
 ![Treble Ringers](/images/bellsoftherockiesapril2025-141.jpg)
-
-{{< column >}}
-
+{{<column>}}
 {{< form-contact-custom
     action="https://www.bellsoftherockies.org/ajax/apps/formSubmitAjax.php"
     message-label="Comment"
 >}}
-
-{{< endcolumns >}}
+{{<endcolumns>}}
