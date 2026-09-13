@@ -69,3 +69,22 @@ h3.left + p {
     color: #b5aaf6;
     font-weight: bolder;
 }
+
+/* Home Page */
+@media screen and (min-width: 600px){
+    article div.home-article :where(h2, h3, h4) {
+        float: left;
+        width: calc(100% / 3);
+        text-align: left;
+    }
+
+    article div.home-article :where(h2, h3, h4) + p {
+        float: right;
+        width: calc(100% * 2 / 3);
+        text-align: left;
+    }
+
+    article div.home-article :where(h2, h3, h4) + p + p {
+        clear: both;
+    }
+}
