@@ -14,6 +14,6 @@ Bells of the Rockies is an auditioned community handbell choir comprised of hand
 Founded in 1996 by Michael Kastner, we are a 501(c)(3) and governed by a Board of Directors. We own 5 1/2 octaves of Schulmerich handbells and 6 octaves of Malmark chimes and the accessories that come with handbell ringing. We average 4-6 performances per year. Our performance year is August through June. We currently rehearse on Tuesday nights in the Northern Colorado area (Loveland, South Fort Collins, North Longmont, or West Windsor).
 
 ![Single Handbell Ringer](/images/bellsoftherockiesapril2025-49.jpg)
-{ .img-left5 }
+{ .img-right5 }
 
 Our ringers come from many communities throughout the Colorado and Wyoming Front Range. Ringers audition annually to earn the right to join this group of seasoned handbell musicians in challenging music.
