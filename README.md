@@ -32,15 +32,16 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
     - Setup Facebook link properly in Contact page
     - PayPal link as button
 - Support page needs lots of formatting work
-    - Stylesheet to auto-adjust
+    - Stylesheet to auto-adjust (no `{.purple}` tags)
 - Admin rendering
     - Could theoretically do full page renders
     - Worth it or no?
     - [ ] Should at least get coloring
+    - [ ] Reference main CSS?
 - Admin Deployment
-    - Reference main CSS?
-    - Setup CF deployment as separate
-    - Remove from main hugo-botr
+    - [x] Setup CF deployment as separate
+    - [x] Remove from main hugo-botr
+    - [ ] **Switch hugo-botr to review workflow**
 - Shortcode errors (see below)
 - Debug/fix Concert YouTube edit
   - shortcode seems broken, fix or prefer below
