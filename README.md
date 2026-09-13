@@ -4,19 +4,19 @@ This is a means of learning [Hugo](https://gohugo.io) by making a rough clone of
 The site currently uses custom modifications to the [Ananke](https://github.com/gohugo-ananke/ananke) theme
 
 ### WIP
-- Change defaults on most to text left-align
-    - Add shortcode to center text
+- [x] Change defaults on most to text left-align
+    - [x] Add shortcode to center text
 - [x] Work on Image align
     - [x] Need to be shortcode?
     - [x] CSS for before/after
-- Add a banner/callout
-    - .full-ringers on audition page
+- [x] Add a banner/callout
+    - [x] .full-ringers on audition page
 - Concerts/repertoire auto
     - Repertoire to individual pages
-    - Individual concert pages
+    - [ ] Individual concert pages
     - Index for repertoire
-    - Index for concert pages
-    - Mark concert(s) to show on index page
+    - [ ] Index for concert pages
+    - [ ] Mark concert(s) to show on index page
 - Forms: One of
     1. Standard HTML forms
         - Add shortcode in admin UI
@@ -29,9 +29,6 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
     - Revisit menu collapse
     - All-caps more intrusive on mobile
 - Improve social links
-    - YouTube *playlist* on concert
-    - Link with logo for individual songs?
-    - Can auto-pull from playlist?
     - Setup Facebook link properly in Contact page
     - PayPal link as button
 - Support page needs lots of formatting work
@@ -39,7 +36,29 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
 - Admin rendering
     - Could theoretically do full page renders
     - Worth it or no?
+    - [ ] Should at least get coloring
 - Admin Deployment
     - Reference main CSS?
     - Setup CF deployment as separate
     - Remove from main hugo-botr
+- Shortcode errors (see below)
+- Debug/fix Concert YouTube edit
+  - shortcode seems broken, fix or prefer below
+  - YouTube *playlist* on concert
+    - Link with logo for individual songs
+    - Can auto-pull/auto-match songs from playlist
+
+### Shortcode errors
+The columns/column/endcolumns have errors as they're split into 3 separate files. Maybe look into making it a single shortcode
+
+One option would be to process as something like:
+```hugo
+{{< columns >}}
+Left
+---
+{.column-break}
+Right
+{{< /columns >}}
+```
+
+Then in the shortcode, split on the column break and render properly

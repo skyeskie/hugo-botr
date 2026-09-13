@@ -20,8 +20,7 @@ selections:
       Keyboard: Marshall Jones
       Percussion: Keaton Michel and Joanna Silvestri
     videos:
-      - performance: May 2 OSLC
-        youtube: TEST
+      May 2 OSLC: TEST
   - subtitle: Unite
     song: finlandia
     instrumentalists: null
