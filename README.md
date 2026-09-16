@@ -14,7 +14,7 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
 - Concerts/repertoire auto
     - [ ] Repertoire to individual pages
     - [x] Individual concert pages
-    - [ ] Index for repertoire
+    - [x] Index for repertoire
     - [x] Index for concert pages
     - [ ] Mark concert(s) to show on index page
 - Forms: One of
@@ -49,7 +49,10 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
   - shortcode seems broken, fix or prefer below
   - YouTube *playlist* on concert
     - Link with logo for individual songs
-    - Can auto-pull/auto-match songs from playlist
+    - Can auto-pull/auto-match songs from playlist?
+      - XML seems to only work for channel as a whole
+      - Would need separate app with API - run in GH actions only
+      - Run to pull (all?) channel playlists, then can import for referencing
 - Model changes
   - Video playlists
   - External songs
