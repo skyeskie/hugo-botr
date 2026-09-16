@@ -1,0 +1,90 @@
+{{ define "header" }}
+    {{ partials.Include "page-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+    {{- $related_content := .RegularPages.Related . -}}
+    {{- $needs_aside := or .Params.toc $related_content -}}
+
+    {{- $dates := .Params.dates | default (slice) -}}
+    {{- $image := .Params.logo | default .Params.poster | default "" -}}
+
+    {{/* Calculate a unique class for this post */}}
+    {{- $post_class := "" -}}
+    {{- with .File -}}
+        {{- $post_class = printf "concert-%s" .ContentBaseName -}}
+    {{- end -}}
+
+    <article class="pv4 {{ $post_class }} flex-l {{ if $needs_aside }}mw8{{ else }}mw7{{ end }} center ph3 flex-wrap justify-between">
+        <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | compare.Default "serif"}} f4 nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }} {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl4-l" "pr4-l" }} {{ if $needs_aside }}w-two-thirds-l{{ else }}w-100-l{{ end }}">
+            {{- $year := .Params.year | default 2026 -}}
+            {{- $extra := .Params.extra -}}
+            {{- with .Params.season -}}
+                <h3 class="mb0 center">{{ . }} {{ $year }} {{ $extra }}</h3>
+            {{- end -}}
+            <h2 class="mv0 center" style="font-size: 2.5em">{{ .Title }}</h2>
+            <div class="flex-l">
+                {{- with resources.Get $image -}}
+                <img src="{{ .RelPermalink }}" class="w-50-l"  alt="Concert Poster"/>
+                {{- end -}}
+                <div class="w-50-l pl3">
+                    <p>{{ .Content }}</p>
+                    {{ range $dates }}
+                    {{ partial "concert-datetime.html" . }}
+                    {{ end }}
+                </div>
+            </div>
+            {{ $site := .Site }}
+            {{ $last_subtitle := "[]" }}
+            {{- if gt (len .Params.selections) 0 -}}
+            <div style="background-color: #444; border-radius: 2em;" class="pa3 mv3 cb">
+            {{- range .Params.selections -}}
+                {{- if and (ne $last_subtitle "[]") (ne $last_subtitle .subtitle) -}}
+                </div>
+                {{- end -}}
+                {{- if or (eq .subtitle "") (ne $last_subtitle "[]" .subtitle) -}}
+                <div style="background-color: #444; border-radius: 2em;" class="pa3 mv3 cb">
+                {{- end -}}
+                {{- if ne $last_subtitle .subtitle -}}
+                    {{- with .subtitle }}
+                        <div style="text-align: center; font-variant: small-caps;">{{ . }}</div>
+                        <hr />
+                    {{ end }}
+                {{- else -}}
+                    <hr class="mv3" />
+                {{- end -}}
+                {{- $last_subtitle = .subtitle -}}
+                {{- $song_lookup := fmt.Printf "/repertoire/%s" .song -}}
+                {{- $song_info := $site.GetPage $song_lookup -}}
+                {{- with $song_info -}}
+                {{- else -}}
+                    <p>Could not lookup song info for {{ $song_lookup }}</p>
+                    {{- fmt.Errorf "Could not lookup song info for '%s'" $song_lookup -}}
+                    {{- $song_info = dict -}}
+                {{- end -}}
+                <h3 class="dib mv0 fl" style="font-size: 1.6em">
+{{/*                    <a href="{{ $song_info.RelPermalink }}" class="link">{{ $song_info.Title | default .song }}</a>*/}}
+                    {{ $song_info.Title | default .song }}
+                </h3>
+                {{- range ($song_info.Params.composer | default (slice)) | collections.Reverse -}}
+                    <p class="dib fr ml3 mv1">{{ . }}</p>
+                {{- end -}}
+                {{- with $song_info.Params.arranger -}}
+                    <p class="dib cr fr ml3 mv0">arr. {{ . }}</p>
+                {{- end -}}
+                {{- with $song_info.Params.adapted -}}
+                    <p class="dib cr fr ml3 mv0">Adapted by {{ . }}</p>
+                {{- end -}}
+                {{- range $k, $v := .instrumentalists }}
+                    <p class="cl fl mv0 ml5">{{ $k }}: {{ $v }}</p>
+                {{ end }}
+                {{- with .videos -}}<p class="cl fl mv1 tc">Videos: {{ . }}</p>{{- end -}}
+                    <div class="cb"></div>
+                {{- end -}}
+            {{- end -}}
+            {{- if ne $last_subtitle "[]" -}}
+                </div>
+            {{- end -}}
+        </div>
+    </article>
+{{ end }}

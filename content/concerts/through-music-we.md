@@ -2,7 +2,7 @@
 year: 2026
 season: May
 poster: /concerts/may2026-cover.jpg
-logo: ''
+logo: /concerts/may2026-graphic.webp
 extra: ''
 sort: 2026-05
 title: Through Music We
@@ -21,6 +21,10 @@ selections:
       Percussion: Keaton Michel and Joanna Silvestri
     videos:
       May 2 OSLC: TEST
+  - subtitle: Wonder
+    song: cluster-stars-pleiades
+    instrumentalists: null
+    videos: []
   - subtitle: Unite
     song: finlandia
     instrumentalists: null
@@ -61,3 +65,4 @@ selections:
       Percussion: Keaton Michel and Kathryn Rudd
     videos: []
 ---
+Music something that can evoke a wide range of emotions. In this concert, we explore the various emotions of music with a wide selection of handbell music.

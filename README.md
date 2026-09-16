@@ -12,10 +12,10 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
 - [x] Add a banner/callout
     - [x] .full-ringers on audition page
 - Concerts/repertoire auto
-    - Repertoire to individual pages
-    - [ ] Individual concert pages
-    - Index for repertoire
-    - [ ] Index for concert pages
+    - [ ] Repertoire to individual pages
+    - [x] Individual concert pages
+    - [ ] Index for repertoire
+    - [x] Index for concert pages
     - [ ] Mark concert(s) to show on index page
 - Forms: One of
     1. Standard HTML forms
@@ -25,6 +25,8 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
     2. Google Forms
         - Figure out embed
         - Add shortcode for embed
+- General formatting
+    - [ ] Titles on non-home, non-list pages no longer centered
 - Mobile formatting
     - Revisit menu collapse
     - All-caps more intrusive on mobile
@@ -41,13 +43,18 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
 - Admin Deployment
     - [x] Setup CF deployment as separate
     - [x] Remove from main hugo-botr
-    - [ ] **Switch hugo-botr to review workflow**
+    - [x] Switch hugo-botr to review workflow
 - Shortcode errors (see below)
 - Debug/fix Concert YouTube edit
   - shortcode seems broken, fix or prefer below
   - YouTube *playlist* on concert
     - Link with logo for individual songs
     - Can auto-pull/auto-match songs from playlist
+- Model changes
+  - Video playlists
+  - External songs
+    - Option A: Have a direct text entry of some form
+    - Option B: Put in full repertoire, but exclude from indexing
 
 ### Shortcode errors
 The columns/column/endcolumns have errors as they're split into 3 separate files. Maybe look into making it a single shortcode

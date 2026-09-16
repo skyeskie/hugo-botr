@@ -1,0 +1,42 @@
+{{ define "main" }}
+    {{ $summary_template := "summary" }}
+    {{ if $.Param "ananke.pages.show_list_images" }}
+        {{ $summary_template = "summary-with-image" }}
+    {{ end }}
+
+<article class="ringers-index pa3 pa4-ns nested-copy-line-height {{ $.Param "text_color" | compare.Default "mid-gray" }} center f4 {{ $.Param "post_content_classes" | compare.Default "serif"}}">
+    {{- .Content -}}
+    <h2>Upcoming Concert Dates</h2>
+    <p>Bring your family and friends and enjoy festive music!</p>
+    {{- $dates := (slice) -}}
+    {{- range .Pages -}}
+        {{ if reflect.IsSlice .Params.dates }}
+        {{ $dates = append $dates .Params.dates }}
+        {{ end }}
+    {{- end -}}
+    <ul>
+    {{- $concerts_shown := 0 -}}
+    {{- $cutoff := time.Now.Add (time.Duration "hour" 48) -}}
+    {{- range sort $dates "date" "desc" -}}
+        {{- if gt (time.AsTime .date) $cutoff -}}
+        {{- $concerts_shown = (add $concerts_shown 1) -}}
+        <li>{{ . }}</li>
+{{/*        {{- else -}}*/}}
+{{/*        <li>PAST {{ . }}</li>*/}}
+        {{- end -}}
+    {{- end -}}
+    </ul>
+    {{- if (eq $concerts_shown 0) -}}
+    <p>No upcoming concerts configured ({{ $concerts_shown }})</p>
+    {{- end -}}
+    <hr />
+    <h2>Past Concerts</h2>
+    <div>
+    <ul>
+        {{- range (.Pages.ByParam "sort").Reverse -}}
+            <li><a href="{{ .RelPermalink }}">{{ .Params.season }} {{ .Params.year }} - {{ .Title }}</a></li>
+        {{- end -}}
+    </ul>
+    </div>
+</article>
+{{ end }}
