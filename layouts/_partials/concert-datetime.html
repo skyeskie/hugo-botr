@@ -31,17 +31,27 @@ Also need to check - if date in the past, just omit rather than TBA
     {{ end }}
 {{ end }}
 
-<h3 class="mb0">{{ time.Format "January 2, 2006" $datetime }}</h3>
-<p class="ml4 mv0">
+<h3 class="mb0">{{ time.Format "Monday, January 2, 2006" $datetime }}</h3>
+<p class="mh4 mv0">
+{{ with .date_extra }}
+{{ . }}<br />
+{{ end }}
 {{ with $where }}
 {{ .title }}<br />
 {{ .street }} {{ .city }}, {{ .state }}<br />
 {{ else }}
     {{- if $past_concert -}}
-    Location TBD
+    Location TBD<br />
     {{- end -}}
 {{ end }}
 {{ if $have_time }}
-    {{ time.Format "3pm" $datetime }}
+    {{- if ne (time.Format "04" $datetime) "00" -}}
+        {{ time.Format "3:04pm" $datetime }}
+    {{- else -}}
+        {{ time.Format "3pm" $datetime }}
+    {{- end -}}
+{{- end -}}
+{{- with .time_extra -}}
+    , {{ . }}
 {{ end }}
 </p>

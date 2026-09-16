@@ -7,33 +7,41 @@
 <article class="ringers-index pa3 pa4-ns nested-copy-line-height {{ $.Param "text_color" | compare.Default "mid-gray" }} center f4 {{ $.Param "post_content_classes" | compare.Default "serif"}}">
     {{- .Content -}}
     <h2>Upcoming Concert Dates</h2>
-    <p>Bring your family and friends and enjoy festive music!</p>
+    <p class="tc">Bring your family and friends and enjoy festive music!</p>
     {{- $dates := (slice) -}}
-    {{- range .Pages -}}
+    {{- $past_concerts := (slice) -}}
+    {{- $future_concerts := (slice) -}}
+    {{- $cutoff := time.Now.Add (time.Duration "hour" 48) -}}
+    {{- range (.Pages.ByParam "sort").Reverse -}}
         {{ if reflect.IsSlice .Params.dates }}
-        {{ $dates = append $dates .Params.dates }}
+            {{ $added_dates := false }}
+            {{ range .Params.dates }}
+                {{- if gt (time.AsTime .date) $cutoff -}}
+                    {{- $added_dates = true -}}
+                {{- end -}}
+            {{ end }}
+            {{- if $added_dates -}}
+                {{- $future_concerts = $future_concerts | append . -}}
+            {{- else -}}
+                {{- $past_concerts = $past_concerts | append . -}}
+            {{- end -}}
         {{ end }}
     {{- end -}}
-    <ul>
-    {{- $concerts_shown := 0 -}}
-    {{- $cutoff := time.Now.Add (time.Duration "hour" 48) -}}
-    {{- range sort $dates "date" "desc" -}}
-        {{- if gt (time.AsTime .date) $cutoff -}}
-        {{- $concerts_shown = (add $concerts_shown 1) -}}
-        <li>{{ . }}</li>
-{{/*        {{- else -}}*/}}
-{{/*        <li>PAST {{ . }}</li>*/}}
+    {{- range $future_concerts.Reverse -}}
+        {{- if ne .Title "TBD" "" "tbd" "Untitled" -}}
+            <h3>{{ .Title }}</h3>
         {{- end -}}
+        {{- range sort .Params.dates "date" -}}
+        <div class="tc">{{ partial "concert-datetime" . }}</div>
+        {{- end -}}
+    {{- else -}}
+        <p>No upcoming concerts configured</p>
     {{- end -}}
-    </ul>
-    {{- if (eq $concerts_shown 0) -}}
-    <p>No upcoming concerts configured ({{ $concerts_shown }})</p>
-    {{- end -}}
-    <hr />
+    <hr class="ma4" />
     <h2>Past Concerts</h2>
     <div>
-    <ul>
-        {{- range (.Pages.ByParam "sort").Reverse -}}
+    <ul class="list tc ma0 pa0">
+        {{- range $past_concerts -}}
             <li><a href="{{ .RelPermalink }}">{{ .Params.season }} {{ .Params.year }} - {{ .Title }}</a></li>
         {{- end -}}
     </ul>
