@@ -8,6 +8,10 @@
         {{- .Content -}}
         <ul class="list pa0" style="display: grid; grid-template-columns: 1fr 60px 1fr;">
         {{- range (.Pages.ByTitle) -}}
+            {{/* Skip any songs marked as "external" */}}
+            {{- if eq .Params.external true -}}
+                {{- continue -}}
+            {{- end -}}
             <p class="dib tr pr2 mv0" style="grid-column-start: 1;"><b style="font-size: 1.2em;">
                 <a href="{{ .RelPermalink }}" style="color: gold;">{{ .Title }}</a>
             </b></p>
@@ -18,6 +22,7 @@
                 {{ range $composer }} <b>{{ . }}</b>{{ end }}
                 {{- if gt (len .Params.composer) 1 }} et al{{- end }}
                 {{- with .Params.arranger }} arr. <b>{{ . }}</b>{{ end }}
+                {{- with .Params.transcriber }} trans. <b>{{ . }}</b>{{ end }}
             </p>
         {{- end -}}
         </ul>

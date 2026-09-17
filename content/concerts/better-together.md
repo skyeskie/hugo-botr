@@ -14,12 +14,24 @@ dates:
     time: 19:30
     # location: embassy-suites
 selections:
-    # Triumphant Celebration
-    # When Johnny Comes Marching Home
-    # Dance Americana
-    # Rocky Mountin Portrait
-    # When the Saints Go Marching In
-    # Waltz Masquerade
+  - subtitle: Combined Ensembles
+    song: triumphant-celebration
+  - subtitle: Denver Bronze
+    song: when-johnny-comes-marching-home
+  - subtitle: Denver Bronze
+    song: dance-americana
+    instrumentalists:
+      Violin: Jonathan Albright
+  - subtitle: Denver Bronze
+    song: rocky-mountain-portrait
+  - subtitle: Denver Bronze
+    song: when-the-saints-go-marching-in
+    instrumentalists:
+      Clarinet: Mary Elizabeth Phillippe
+  - subtitle: Combined Ensembles
+    song: waltz-from-masquerade-suite
+    instrumentalists:
+      Percussion: Keaton Michel and Scott Yeskie
   - subtitle: Bells of the Rockies
     song: sogno-di-volare
     instrumentalists:

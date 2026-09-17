@@ -52,9 +52,9 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
     - Run to pull all playlists and videos, then have data for Admin UI to quick add
 - Model changes
   - Video playlists
-  - External songs
+  - [x] External songs
     - Option A: Have a direct text entry of some form
-    - Option B: Put in full repertoire, but exclude from indexing
+    - [x] Option B: Put in full repertoire, but exclude from indexing
 
 ### Shortcode errors
 The columns/column/endcolumns have errors as they're split into 3 separate files. Maybe look into making it a single shortcode
