@@ -10,21 +10,24 @@ dates:
   - date: 2026-05-02
     time: 16:00
     location: OSLC
+    short: May 2 Greeley
   - date: 2026-05-03
     time: 16:00
     location: MVPC
+    short: May 3 Loveland
 selections:
   - subtitle: Dream
     song: sogno-di-volare
     instrumentalists:
       Keyboard: Marshall Jones
       Percussion: Keaton Michel and Joanna Silvestri
-    videos:
-      May 2 OSLC: TEST
+    videos: []
   - subtitle: Wonder
     song: cluster-stars-pleiades
     instrumentalists: null
-    videos: []
+    videos:
+      May 2 Greeley: 41aeSCLr2cY
+      May 3 Loveland: 4qclX5gVc5E
   - subtitle: Unite
     song: finlandia
     instrumentalists: null

@@ -63,8 +63,8 @@
                     {{- $song_info = dict -}}
                 {{- end -}}
                 <h3 class="dib mv0 fl" style="font-size: 1.6em">
-{{/*                    <a href="{{ $song_info.RelPermalink }}" class="link">{{ $song_info.Title | default .song }}</a>*/}}
-                    {{ $song_info.Title | default .song }}
+                    <a href="{{ $song_info.RelPermalink }}" class="link">{{ $song_info.Title | default .song }}</a>
+{{/*                    {{ $song_info.Title | default .song }}*/}}
                 </h3>
                 {{- range ($song_info.Params.composer | default (slice)) | collections.Reverse -}}
                     <p class="dib fr ml3 mv1">{{ . }}</p>
@@ -78,9 +78,18 @@
                 {{- range $k, $v := .instrumentalists }}
                     <p class="cl fl mv0 ml5">{{ $k }}: {{ $v }}</p>
                 {{ end }}
-                {{- with .videos -}}<p class="cl fl mv1 tc">Videos: {{ . }}</p>{{- end -}}
-                    <div class="cb"></div>
+                {{- with .videos -}}
+                <p class="video-links">
+                {{- $icon := resources.Get "ananke/socials/youtube.svg" -}}
+                {{- range $short, $id := . -}}
+                    <a href="https://youtu.be/{{ $id }}" class="link">{{- with $icon -}}
+                        <span class="icon yt">{{ .Content | safe.HTML }}</span>
+                    {{- end -}} {{ $short }}</a>
                 {{- end -}}
+                </p>
+                {{- end -}}
+                <div class="cb"></div>
+            {{- end -}}
             {{- end -}}
             {{- if ne $last_subtitle "[]" -}}
                 </div>

@@ -48,11 +48,8 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
 - Debug/fix Concert YouTube edit
   - shortcode seems broken, fix or prefer below
   - YouTube *playlist* on concert
-    - Link with logo for individual songs
-    - Can auto-pull/auto-match songs from playlist?
-      - XML seems to only work for channel as a whole
-      - Would need separate app with API - run in GH actions only
-      - Run to pull (all?) channel playlists, then can import for referencing
+    - [x] Link with logo for individual songs
+    - Run to pull all playlists and videos, then have data for Admin UI to quick add
 - Model changes
   - Video playlists
   - External songs

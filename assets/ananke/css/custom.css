@@ -72,6 +72,38 @@ td, th {
     font-weight: bolder;
 }
 
+/**
+ *  YouTube inline icons (in link)
+ */
+p.video-links {
+    clear: left;
+    margin: 0;
+}
+
+p.video-links a {
+    display: inline-block;
+    margin: 0 1rem;
+    vertical-align: bottom;
+    color: #96ccff;
+}
+
+p.video-links a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.icon.yt svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    color: #ff333399;
+    fill: currentColor;
+}
+
+p.video-links a:hover svg {
+    color: #ff0000;
+}
+
 /*
  *  Home Page
  */
