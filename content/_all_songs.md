@@ -1,0 +1,22 @@
+---
+repertoire:
+  - carnivale
+  - celtic-silent-night
+  - cluster-stars-pleiades
+  - colorado-mountaintop
+  - dance-americana
+  - exultate
+  - finlandia
+  - firework
+  - may-it-be
+  - mighty-fortress
+  - nanita-nana
+  - poor-wayfaring-stranger
+  - rocky-mountain-portrait
+  - sogno-di-volare
+  - song-of-peace
+  - triumphant-celebration
+  - waltz-from-masquerade-suite
+  - when-johnny-comes-marching-home
+  - when-the-saints-go-marching-in
+---

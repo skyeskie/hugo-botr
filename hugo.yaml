@@ -18,6 +18,24 @@ caches:
   images:
     dir: :cacheDir/images
 
+taxonomies:
+  composer: composer
+  arranger: arranger
+  adapted: adapted
+  transcriber: transcriber
+  # Need to maintain abbreviated from "selections"
+  repertoire: repertoire
+
+permalinks:
+  - pattern: /writer/
+    kind: {taxonomy,term}
+    target:
+      path: '{/arranger,/adapted,/transcriber,/composer}'
+  - pattern: /writer/:slug/
+    kind: { taxonomy,term }
+    target:
+      path: '{/arranger/**,/adapted/**,/transcriber/**,/composer/**}'
+
 markup:
   goldmark:
     parser:

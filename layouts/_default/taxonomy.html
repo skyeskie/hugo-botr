@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{/*    <pre>{{ debug.Dump site.Taxonomies }}</pre>*/}}
+{{/*    <pre>{{ range $k,$v := site.Taxonomies }}*/}}
+{{/*        {{ $k }}: {{len $v }}{{ end }}</pre>*/}}
+    {{ $writers := newScratch }}
+    {{ range $taxonomy, $data := site.Taxonomies }}
+        {{ if ne $taxonomy "adapted" "arranger" "composer" "transcriber" }}
+            {{ continue }}
+        {{ end }}
+        {{ range $term := $data.Alphabetical }}
+            {{ $writer := $term.Page.Title }}
+            {{ range $term.Pages }}
+                {{ $entry := dict
+                    "Title" .LinkTitle
+                    "Params" .Page.Params
+                    "Type" $taxonomy
+                    "RelPermalink" .Page.RelPermalink
+                }}
+                {{ $writers.Add $writer (slice $entry) }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{/*    <pre>{{ debug.Dump $writers.Values }}</pre>*/}}
+    <article class="pa3 pa4-ns {{ $.Param "text_color" | compare.Default "mid-gray" }} {{ $.Param "post_content_classes" | compare.Default "serif"}} center f4 {{ $.Param "post_content_classes" | compare.Default "serif"}}">
+        <div class="tl">
+            {{ range $writer, $links := $writers.Values }}
+                <h3>{{ $writer }}</h3>
+                <ul>
+                {{ range $links }}
+                    <li class="list">{{.Type | strings.FirstUpper}} <a href="{{ .RelPermalink }}" class="link">{{ .Title }}</a></li>
+                {{ end }}
+                </ul>
+            {{ end }}
+        </div>
+    </article>
+{{ end }}

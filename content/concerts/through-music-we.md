@@ -15,6 +15,16 @@ dates:
     time: 16:00
     location: MVPC
     short: May 3 Loveland
+repertoire:
+  - sogno-di-volare
+  - cluster-stars-pleiades
+  - poor-wayfaring-stranger
+  - exultate
+  - song-of-peace
+  - may-it-be
+  - colorado-mountaintop
+  - firework
+  - carnivale
 selections:
   - subtitle: Dream
     song: sogno-di-volare
