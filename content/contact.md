@@ -18,8 +18,5 @@ bellsoftherockies1996@gmail.com
 
 ![Treble Ringers](/images/bellsoftherockiesapril2025-141.jpg)
 {{<column>}}
-{{< form-contact-custom
-    action="https://www.bellsoftherockies.org/ajax/apps/formSubmitAjax.php"
-    message-label="Comment"
->}}
+{{< gform 1FAIpQLSfnE7CN9oDXrZXx0CLRWdaJGROqATtdGP3sJLKtze9lJnUjNA >}}
 {{<endcolumns>}}

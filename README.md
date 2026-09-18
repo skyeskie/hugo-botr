@@ -21,10 +21,15 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
     1. Standard HTML forms
         - Add shortcode in admin UI
         - Figure out action target
-        - See if need to adjust action target code
+        - Is existing tied to Weebly?
+        - Should be able to use CloudFlare workers
+        - Possibly tie into Google sheets? Email?
     2. Google Forms
-        - Figure out embed
-        - Add shortcode for embed
+        - [x] Figure out embed
+        - [x] Add shortcode for embed
+        - **Formatting is terrible**
+        - Can extract HTML elements from something like: https://stefano.brilli.me/google-forms-html-exporter/
+        - Not user-friendly. Field names differ Should be able to replicate in SveltiaUI and/or Hugo
 - General formatting
     - [ ] Titles on non-home, non-list pages no longer centered
 - Mobile formatting
