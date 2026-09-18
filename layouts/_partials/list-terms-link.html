@@ -1,0 +1,14 @@
+{{- /* Input: Term Array */ -}}
+{{- $len := len . -}}
+{{- if eq $len 0 -}}
+{{- else if eq $len 1 -}}
+    {{- range . -}}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end -}}
+{{- else if eq $len 2 -}}
+    {{- range (first 1 .) -}}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end -}}
+    {{- " and " -}}
+    {{- range (last 1 .) -}}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end -}}
+{{- else if gt $len 2 -}}
+    {{- range (first (sub $len 1) .) -}}<a href="{{ .RelPermalink }}">{{ .Title }}</a>, {{ end -}}
+    {{- " and " -}}
+    {{- range (last 1 .) -}}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end -}}
+{{- end -}}

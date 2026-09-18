@@ -32,5 +32,24 @@
         {{- end -}}
         {{- end -}}
         </ul>
+        <hr />
+        {{- range site.Taxonomies.repertoire -}}
+        {{- with .Page -}}
+            {{- if or (eq .Params.external true) (eq .Title "Repertoire") -}}
+                {{/*                <p>SKIP: {{ .Title }}</p>*/}}
+                {{- continue -}}
+            {{- end -}}
+            <div class="bg-gray mv2 br-pill">
+                <p class="fl mh4 mv0">2026</p>
+                <p class="fr mh4 mv0">Video 3</p>
+                <h3 class="mv0" style="font-size: 1.2em;"><a href="{{ .RelPermalink }}" style="color: gold;">{{ .Title }}</a></h3>
+                <p class="mv0" style="font-size: 0.9em;">
+                    {{- partial "list-terms-link.html" (.GetTerms "composer") -}}
+                    {{- range (.GetTerms "arranger") }} arr. <a class="fw4 link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+                    {{- range (.GetTerms "transcriber") }} trans. <a class="fw4 link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+                </p>
+            </div>
+        {{- end -}}
+        {{- end -}}
     </article>
 {{ end }}
