@@ -12,7 +12,7 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
 - [x] Add a banner/callout
     - [x] .full-ringers on audition page
 - Concerts/repertoire auto
-    - [ ] Repertoire to individual pages
+    - [x] Repertoire to individual pages
     - [x] Individual concert pages
     - [x] Index for repertoire
     - [x] Index for concert pages
@@ -31,8 +31,9 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
     - Revisit menu collapse
     - All-caps more intrusive on mobile
 - Improve social links
-    - Setup Facebook link properly in Contact page
-    - PayPal link as button
+    - [x] Setup Facebook link properly in Contact page
+    - [x] PayPal link as button
+    - [ ] See [this repo](https://github.com/squidfingers/hugo-shortcodes/blob/main/layouts/_shortcodes/icon.html) for nesting
 - Support page needs lots of formatting work
     - Stylesheet to auto-adjust (no `{.purple}` tags)
 - Admin rendering
@@ -46,14 +47,14 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
     - [x] Switch hugo-botr to review workflow
 - Shortcode errors (see below)
 - Debug/fix Concert YouTube edit
-  - shortcode seems broken, fix or prefer below
+  - shortcode seems broken, need to fix
   - YouTube *playlist* on concert
     - [x] Link with logo for individual songs
     - Run to pull all playlists and videos, then have data for Admin UI to quick add
 - Model changes
   - Video playlists
   - [x] External songs
-    - Option A: Have a direct text entry of some form
+    - ~~Option A: Have a direct text entry of some form~~
     - [x] Option B: Put in full repertoire, but exclude from indexing
 
 ### Shortcode errors

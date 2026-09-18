@@ -3,17 +3,17 @@ title: How to Support Bells of the Rockies
 featured_image: /images/bg-handbells.jpg
 ---
 
-{{< center >}}
+{{% center %}}
 ### Thank you Bells of the Rockies fans!
-{{< /center >}}
+{{% /center %}}
 
 Due to the generosity of our patrons we have purchased our own set of Schulmerich handbells. Thank you to everyone who previously gave to our fundraising campaign.
 
 ***
 
-{{< center >}}
+{{% center %}}
 ## But wait! There's more.
-{{< /center >}}
+{{% /center %}}
 
 We continue to expand our set of bells and want to add those big bass bells which make our music richer and give it depth. One bell plus the case range cost upwards of $6,500. If you want to help us take one more step toward our goal, then donate via PayPal by clicking the link below or donate directly at one of our concerts.
 
@@ -22,17 +22,16 @@ If you donate a bell or set of bells, your name will be put on the bell cases an
 Need another option to donate besides an online donation? Please reach out to us at bellsoftherockies1996@gmail.com.
 { .f5 }
 
-{{< center >}}
+{{% center %}}
 ## Click here to donate:
 
-{ .mt3 .mb0 .f1 }
 [PayPal](https://www.paypal.com/biz/fund?id=BXH6K65AEG6YE)
-{ .mt0 .mb5 .f2 }
-{{< /center >}}
+{ .mt0 .mb5 .f2 .paypal }
+{{% /center %}}
 
-{{< center >}}
+{{% center %}}
 ## Other ways to support Bells of the Rockies
-{{< /center >}}
+{{% /center %}}
 
 {{<columns>}}
 ### King Soopers

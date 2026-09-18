@@ -49,6 +49,11 @@ p, div {
     text-align: center;
 }
 
+.center :is(h1, h2, h3, h4, h5) {
+    text-align: center;
+    margin-bottom: 0;
+}
+
 td, th {
     text-align: center;
 }
@@ -92,11 +97,49 @@ p.video-links a:hover {
     color: #ffffff;
 }
 
-.icon.yt svg {
+.icon svg {
     width: 20px;
     height: 20px;
+    fill: currentColor;
+}
+
+.icon.large svg {
+    width: 40px;
+    height: 40px;
+}
+
+.icon.center {
+    margin: auto;
+    text-align: center;
+}
+
+.icon.yt svg {
     margin-right: 5px;
     color: #ff333399;
+}
+
+.icon.facebook svg {
+    color: #3b5998;
+}
+
+.icon.facebook:hover svg {
+    color: #eeeeee;
+}
+
+p.paypal {
+    text-align: center;
+}
+
+p.paypal::before, i.icon.paypal {
+    /*noinspection CssUnknownTarget*/
+    mask: url("/icon/paypal.svg");
+    mask-size: cover;
+    content: '';
+    width: 0.6em;
+    height: 0.6em;
+    margin-right: 5px;
+    display: inline-block;
+    background-color: #96ccff;
     fill: currentColor;
 }
 

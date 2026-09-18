@@ -9,7 +9,12 @@ bellsoftherockies1996@gmail.com
 {{< /center >}}
 
 {{<columns>}}
-Facebook
+{{% center %}}
+### [Like us on Facebook!](https://www.facebook.com/BellsoftheRockiesFans/)
+{{% /center %}}
+{{< center >}}
+{{< icon facebook "center large" "https://www.facebook.com/BellsoftheRockiesFans/" >}}
+{{< /center >}}
 
 ![Treble Ringers](/images/bellsoftherockiesapril2025-141.jpg)
 {{<column>}}
