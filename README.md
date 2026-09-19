@@ -4,18 +4,13 @@ This is a means of learning [Hugo](https://gohugo.io) by making a rough clone of
 The site currently uses custom modifications to the [Ananke](https://github.com/gohugo-ananke/ananke) theme
 
 ### WIP
-- [x] Change defaults on most to text left-align
-    - [x] Add shortcode to center text
-- [x] Work on Image align
-    - [x] Need to be shortcode?
-    - [x] CSS for before/after
-- [x] Add a banner/callout
-    - [x] .full-ringers on audition page
 - Concerts/repertoire auto
     - [x] Repertoire to individual pages
     - [x] Individual concert pages
     - [x] Index for repertoire
     - [x] Index for concert pages
+    - [ ] Improve formatting for composer/writer page
+    - [ ] Fix links on Concert and Repertoire leaf pages
     - [ ] Mark concert(s) to show on index page
 - Forms: One of
     1. Standard HTML forms
@@ -29,9 +24,11 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
         - [x] Add shortcode for embed
         - **Formatting is terrible**
         - Can extract HTML elements from something like: https://stefano.brilli.me/google-forms-html-exporter/
-        - Not user-friendly. Field names differ Should be able to replicate in SveltiaUI and/or Hugo
+        - Not user-friendly. Field names abtruse Should be able to replicate in SveltiaUI and/or Hugo
+        - [x] Verify working for sample Google Form with HTML form elements
 - General formatting
-    - [ ] Titles on non-home, non-list pages no longer centered
+    - [x] Titles on non-home, non-list pages no longer centered
+    - [ ] Properly include menu on custom `single.html` and `term.html` pages
 - Mobile formatting
     - Revisit menu collapse
     - All-caps more intrusive on mobile
@@ -46,10 +43,6 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
     - Worth it or no?
     - [ ] Should at least get coloring
     - [ ] Reference main CSS?
-- Admin Deployment
-    - [x] Setup CF deployment as separate
-    - [x] Remove from main hugo-botr
-    - [x] Switch hugo-botr to review workflow
 - Shortcode errors (see below)
 - Debug/fix Concert YouTube edit
   - shortcode seems broken, need to fix
