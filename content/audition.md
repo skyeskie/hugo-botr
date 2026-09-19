@@ -39,10 +39,10 @@ Future auditions may include the following components:
 
 # Bells of the Rockies Audition Sign ups
 
-{{< form-contact-custom
-   action="https://www.bellsoftherockies.org/ajax/apps/formSubmitAjax.php"
-   show-message=false
-   show-telephone=true
->}}
+{{< form-custom action="#" >}}
+   {{< field name="name" label="Your Name" required=true >}}
+   {{< field name="email" label="Email Address" required=true hint="email@example.com" >}}
+   {{< field name="phone" type="tel" label="Phone" required=true hint="000-0000" >}}
+{{< /form-custom >}}
 
 {{<endcolumns>}}

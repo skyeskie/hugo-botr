@@ -1,0 +1,11 @@
+{{ $.Scratch.Add "labelClasses" "f6 b db mb1 mt3 sans-serif light-gray" }}
+{{ $.Scratch.Add "inputClasses" "w-100 f5 pv3 ph3 bg-dark-gray light-gray bn" }}
+{{ $name := .Get "name" }}
+{{ $label := .Get "label" }}
+{{ $required := .Get "required" }}
+{{ $req := "<span class=\"form-required\">*</span>" | safeHTML }}
+<label class="{{ $.Scratch.Get "labelClasses" }}"
+       for="{{ $name }}">{{ $label }}{{ if $required }}{{$req}}{{ end }}</label>
+<textarea id="{{ $name }}" name="{{ $name }}"
+          class="{{ $.Scratch.Get "inputClasses" }} h4"
+          aria-labelledby="{{ $name }}"></textarea>

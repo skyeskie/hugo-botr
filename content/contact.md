@@ -18,5 +18,9 @@ bellsoftherockies1996@gmail.com
 
 ![Treble Ringers](/images/bellsoftherockiesapril2025-141.jpg)
 {{<column>}}
-{{< gform 1FAIpQLSfnE7CN9oDXrZXx0CLRWdaJGROqATtdGP3sJLKtze9lJnUjNA >}}
+{{< form-custom action="https://docs.google.com/forms/d/e/1FAIpQLSfnE7CN9oDXrZXx0CLRWdaJGROqATtdGP3sJLKtze9lJnUjNA/formResponse" >}}
+    {{< field name="entry.872977855" label="Name" required=true >}}
+    {{< field type="email" name="entry.1377293043" label="Email" required=true >}}
+    {{< field type="textarea" name="entry.149761574" label="Comment" required=true >}}
+{{< /form-custom >}}
 {{<endcolumns>}}
