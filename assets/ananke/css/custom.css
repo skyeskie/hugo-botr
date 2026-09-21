@@ -67,10 +67,6 @@ td, th {
 
 .center-right { float: right; }
 
-.qa strong {
-    color: #5e2ca5;
-}
-
 .ringers-index a {
     text-decoration: none;
     color: #b5aaf6;
@@ -126,11 +122,11 @@ p.video-links a:hover {
     color: #eeeeee;
 }
 
-p.paypal {
+a[href*='paypal.com'] {
     text-align: center;
 }
 
-p.paypal::before, i.icon.paypal {
+a[href*='paypal.com']::before, i.icon.paypal {
     /*noinspection CssUnknownTarget*/
     mask: url("/icon/paypal.svg");
     mask-size: cover;
@@ -167,6 +163,35 @@ p.video-links a:hover svg {
         clear: both;
     }
 }
+
+/*
+ *  Support Page
+ */
+article.page-support h2#click-here-to-donate + p {
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-size: 2.25rem;
+}
+
+article.page-support h3, article.page-support div.fr strong {
+    color: mediumpurple;
+}
+
+article.page-support h3#king-soopers {
+    float: left;
+    font-size: 1.5rem;
+    margin: 0 1rem 0 0;
+    font-weight: 600;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+article.page-support h3#king-soopers + * {
+    margin-top: 0.15rem;
+    padding-top: 0.25rem;
+    font-weight: 500;
+}
+
 
 /*
  *  Callout Widgets
