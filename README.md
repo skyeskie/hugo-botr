@@ -38,22 +38,13 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
     - [ ] See [this repo](https://github.com/squidfingers/hugo-shortcodes/blob/main/layouts/_shortcodes/icon.html) for nesting
 - Support page needs lots of formatting work
     - Stylesheet to auto-adjust (no `{.purple}` tags)
-- Admin rendering
-    - Could theoretically do full page renders
-    - Worth it or no?
-    - [ ] Should at least get coloring
-    - [ ] Reference main CSS?
 - Shortcode errors (see below)
-- Debug/fix Concert YouTube edit
-  - shortcode seems broken, need to fix
-  - YouTube *playlist* on concert
-    - [x] Link with logo for individual songs
-    - Run to pull all playlists and videos, then have data for Admin UI to quick add
+- Shortcode nesting issues
+    - Center shortcode block doesn't work well
+    - Solution to the errors above might run into this
+    - Don't really want to enable HTML in markdown mix
 - Model changes
   - Video playlists
-  - [x] External songs
-    - ~~Option A: Have a direct text entry of some form~~
-    - [x] Option B: Put in full repertoire, but exclude from indexing
 
 ### Shortcode errors
 The columns/column/endcolumns have errors as they're split into 3 separate files. Maybe look into making it a single shortcode
