@@ -1,5 +1,5 @@
 ---
-id: 'may-it-be'
+slug: 'may-it-be'
 title: 'May It Be'
 composer:
   - Enya

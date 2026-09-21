@@ -1,5 +1,5 @@
 ---
-id: 'sogno-di-volare'
+slug: 'sogno-di-volare'
 title: 'Sogno Di Volare (The Dream of Flight)'
 composer: ['Christopher Tin']
 arranger: Sharon Schmidt

@@ -1,5 +1,5 @@
 ---
-id: 'firework'
+slug: 'firework'
 title: 'Firework'
 composer:
   - Mikkel Eriksen

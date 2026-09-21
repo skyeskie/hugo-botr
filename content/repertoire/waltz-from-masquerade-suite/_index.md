@@ -1,5 +1,5 @@
 ---
-id: 'waltz-from-masquerade-suite'
+slug: 'waltz-from-masquerade-suite'
 title: 'Waltz From Masquerade Suite'
 composer:
   - Aram Khachaturian
