@@ -4,6 +4,11 @@ last: 'Schmidt'
 title: 'Sharon Schmidt'
 sort: 'Schmidt, Sharon'
 photo: 'sharon_1.jpg'
+url: '/director/'
+aliases:
+  - '/ringers/:slug/'
+  - '/ringers/director/'
+  - '/ringers/_director/'
 director: true
 ---
 
