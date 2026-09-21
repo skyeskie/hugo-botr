@@ -41,7 +41,7 @@ Future auditions may include the following components:
 
 {{< form-custom action="#" >}}
    {{< field name="name" label="Your Name" required=true >}}
-   {{< field name="email" label="Email Address" required=true hint="email@example.com" >}}
+   {{< field name="email" type="email" label="Email Address" required=true hint="email@example.com" >}}
    {{< field name="phone" type="tel" label="Phone" required=true hint="000-0000" >}}
 {{< /form-custom >}}
 
