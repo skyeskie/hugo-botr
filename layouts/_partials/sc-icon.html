@@ -1,0 +1,13 @@
+{{- $icon_name := (.Get 0) -}}
+{{- $class_names := (.Get 1) -}}
+{{- $href := (.Get 2) -}}
+{{- $icon := resources.Get (printf "ananke/socials/%s.svg" $icon_name) -}}
+{{- with $href -}}
+<a href="{{ . }}">
+    {{- end -}}
+    {{- with $icon -}}
+        <span class="icon {{ $icon_name }} {{ $class_names }}">{{ .Content | safe.HTML }}</span>
+    {{- end -}}
+    {{- with $href -}}
+</a>
+{{- end -}}
