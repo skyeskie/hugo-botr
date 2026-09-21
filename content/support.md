@@ -3,17 +3,17 @@ title: How to Support Bells of the Rockies
 featured_image: /images/bg-handbells.jpg
 ---
 
-{{% center %}}
+{{< center >}}
 ### Thank you Bells of the Rockies fans!
-{{% /center %}}
+{{< end-block >}}
 
 Due to the generosity of our patrons we have purchased our own set of Schulmerich handbells. Thank you to everyone who previously gave to our fundraising campaign.
 
 ***
 
-{{% center %}}
+{{< center >}}
 ## But wait! There's more.
-{{% /center %}}
+{{< end-block >}}
 
 We continue to expand our set of bells and want to add those big bass bells which make our music richer and give it depth. One bell plus the case range cost upwards of $6,500. If you want to help us take one more step toward our goal, then donate via PayPal by clicking the link below or donate directly at one of our concerts.
 
@@ -22,47 +22,45 @@ If you donate a bell or set of bells, your name will be put on the bell cases an
 Need another option to donate besides an online donation? Please reach out to us at bellsoftherockies1996@gmail.com.
 { .f5 }
 
-{{% center %}}
+{{< center >}}
 ## Click here to donate:
 
 [PayPal](https://www.paypal.com/biz/fund?id=BXH6K65AEG6YE)
 { .mt0 .mb5 .f2 .paypal }
-{{% /center %}}
 
-{{% center %}}
 ## Other ways to support Bells of the Rockies
-{{% /center %}}
+{{< end-block >}}
 
 {{<columns>}}
 ### King Soopers
-
 { .fl .f3 .fw6 .purple .pv0 .mv0 .mr3 }
 
 Make us your preferred organization for the King Soopers community rewards programs. Link our name--Bells of the Rockies-- to your King Soopers card and King Soopers will make a donation to us every quarter. Register your card online and link our name at www.kingsoopers.com/communityrewards.
-{ .tl .mt1 .pt1 .fw5 }
+{ .mt1 .pt1 .fw5 }
+
 {{<column>}}
 **Q:** Can I still support multiple organizations?
-{ .tl .qa }
+{ .qa }
 
 **A:** Yes, but not at the same time. However, you can easily change your organization at www.kingsoopers.com/communityrewards
-{ .tl .qa }
-{{<endcolumns>}}
+{ .qa }
+{{<end-block 2 true>}}
 
 ***
 
 {{<columns>}}
 ### Advertising:
-
 { .purple }
+
 Please consider advertising in our concert program.
 Programs are booklet style, a full page image area is 6.5"x8"
 
-| Ad Size | 1 Program (Spring or Winter) | 2 Programs  (Both) |
-| --- | --- | --- |
-| 1/8 (3"x2") | $50 | $75 |
-| 1/4 (3.25"x5") | $90 | $150 |
-| 1/2 (6.5"x4") | $150 | $275 |
-| Full Page | $250 | $450 |
+| Ad Size        | 1 Program (Spring or Winter) | 2 Programs  (Both) |
+|----------------|------------------------------|--------------------|
+| 1/8 (3"x2")    | $50                          | $75                |
+| 1/4 (3.25"x5") | $90                          | $150               |
+| 1/2 (6.5"x4")  | $150                         | $275               |
+| Full Page      | $250                         | $450               |
 
 ## I would like to advertise in the concert program.
 
@@ -74,7 +72,6 @@ Programs are booklet style, a full page image area is 6.5"x8"
 >}}
 {{<column>}}
 ### Sponsorship:
-
 { .purple }
 
 - Sponsors ($100-$249): Reserved priority concert seating 
@@ -90,4 +87,4 @@ Programs are booklet style, a full page image area is 6.5"x8"
     show-telephone=true
     show-message=false
 >}}
-{{<endcolumns>}}
+{{<end-block 2 true>}}

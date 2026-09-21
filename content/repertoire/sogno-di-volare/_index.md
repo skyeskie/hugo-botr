@@ -52,4 +52,4 @@ Riempendo l’universo di stupore e gloria.
 
 Gloria!
 
-{{< endcolumns >}}
+{{< end-block 2 true >}}

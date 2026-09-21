@@ -8,9 +8,9 @@ header_section_class: tc-l pv2 ph3 ph4-ns fw6
 We have enough ringers at this time. Next auditions will be held in May 2027.
 {{< /callout >}}
 
-{{% center %}}
+{{< center >}}
 ## Join Our Bell Substitute List
-{{% /center %}}
+{{< end-block >}}
 
 We are always looking for new ringers to join our substitute roster. Being a sub is a great way to meet the group and try your hand at ringer with the ensemble, but without the weekly commitment. For more information, email bellsoftherockies1996@gmail.com.
 
@@ -19,9 +19,9 @@ We are always looking for new ringers to join our substitute roster. Being a sub
 {{<columns>}}
 Bells of the Rockies is an auditioned community ensemble. If you would like information about future auditions for our group, please submit the audition request form. We will contact you the next time we announce audition information.
 
-{{% center %}}
+{{< center >}}
 ### What to Know About Future Auditions
-{{% /center %}}
+{{< end-block >}}
 
 Basic member requirements:
 
@@ -45,4 +45,4 @@ Future auditions may include the following components:
    {{< field name="phone" type="tel" label="Phone" required=true hint="000-0000" >}}
 {{< /form-custom >}}
 
-{{<endcolumns>}}
+{{<end-block 2 true>}}

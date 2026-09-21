@@ -38,25 +38,11 @@ The site currently uses custom modifications to the [Ananke](https://github.com/
     - [ ] See [this repo](https://github.com/squidfingers/hugo-shortcodes/blob/main/layouts/_shortcodes/icon.html) for nesting
 - Support page needs lots of formatting work
     - Stylesheet to auto-adjust (no `{.purple}` tags)
-- Shortcode errors (see below)
-- Shortcode nesting issues
+- [x] Shortcode analysis errors
+- [x] Shortcode nesting issues: changed to not use inner
     - Center shortcode block doesn't work well
     - Solution to the errors above might run into this
     - Don't really want to enable HTML in markdown mix
 - Model changes
   - Video playlists
 
-### Shortcode errors
-The columns/column/endcolumns have errors as they're split into 3 separate files. Maybe look into making it a single shortcode
-
-One option would be to process as something like:
-```hugo
-{{< columns >}}
-Left
----
-{.column-break}
-Right
-{{< /columns >}}
-```
-
-Then in the shortcode, split on the column break and render properly

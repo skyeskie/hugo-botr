@@ -12,7 +12,7 @@ featured_image: /images/bg-chimes.jpg
 {{<column>}}
 {{< youtube id=5Zw37EsBBnU >}}
 {{< youtube id=E4eXynfHj_4 >}}
-{{<endcolumns>}}
+{{<end-block 2 true>}}
 
 {{< button label="Watch Us on YouTube" src="https://www.youtube.com/@bellsoftherockies6348" >}}
 
