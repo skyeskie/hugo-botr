@@ -1,13 +1,14 @@
 ---
 slug: 'sogno-di-volare'
+external: false
 title: 'Sogno Di Volare (The Dream of Flight)'
-composer: ['Christopher Tin']
-arranger: Sharon Schmidt
-adapted: Chiara Cortez
+composer:
+  - 'Christopher Tin'
+arranger: 'Sharon Schmidt'
+adapted: 'Chiara Cortez'
 ---
 
-{{< columns >}}
-
+{{<columns>}}
 Once you have taken flight,
 You’ll decide
 Gaze towards the sky, you’ll know that
@@ -28,9 +29,7 @@ Just like the birds, towards the sky,
 Filling the universe with wonder and glory.
 
 Glory!
-
-{{< column >}}
-
+{{<column>}}
 Una volta che avrai
 Spiccato il volo, deciderai
 Sguardo verson il ciel saprai:
@@ -51,5 +50,4 @@ Come gli ucceli, verso il cielo…
 Riempendo l’universo di stupore e gloria.
 
 Gloria!
-
-{{< end-block 2 true >}}
+{{<end-block 2 true>}}

@@ -1,7 +1,8 @@
 ---
 slug: 'mighty-fortress'
+external: false
 title: 'A Mighty Fortress is Our God'
-# See if can take a list for these
-composer: ['Martin Luther']
-arranger: Kevin McChesney
+composer:
+  - 'Martin Luther'
+arranger: 'Kevin McChesney'
 ---

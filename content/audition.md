@@ -1,7 +1,7 @@
 ---
-title: Audition Information for Bells of the Rockies
-featured_image: /images/bg-handbells.jpg
-header_section_class: tc-l pv2 ph3 ph4-ns fw6
+title: 'Audition Information for Bells of the Rockies'
+featured_image: '/images/bg-handbells.jpg'
+header_section_class: 'tc-l pv2 ph3 ph4-ns fw6'
 ---
 
 {{< callout full-ringers >}}
@@ -37,6 +37,8 @@ Future auditions may include the following components:
 4. Interview with Bells of the Rockies Board director and up to two other adjudicators
 {{<column>}}
 
+
+
 # Bells of the Rockies Audition Sign ups
 
 {{< form-custom action="#" >}}
@@ -44,5 +46,7 @@ Future auditions may include the following components:
    {{< field name="email" type="email" label="Email Address" required=true hint="email@example.com" >}}
    {{< field name="phone" type="tel" label="Phone" required=true hint="000-0000" >}}
 {{< /form-custom >}}
+
+
 
 {{<end-block 2 true>}}

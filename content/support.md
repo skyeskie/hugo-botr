@@ -1,6 +1,6 @@
 ---
-title: How to Support Bells of the Rockies
-featured_image: /images/bg-handbells.jpg
+title: 'How to Support Bells of the Rockies'
+featured_image: '/images/bg-handbells.jpg'
 ---
 
 {{< center >}}
@@ -33,11 +33,11 @@ Need another option to donate besides an online donation? Please reach out to us
 
 {{<columns>}}
 ### King Soopers
+
 { .fl .f3 .fw6 .purple .pv0 .mv0 .mr3 }
 
 Make us your preferred organization for the King Soopers community rewards programs. Link our name--Bells of the Rockies-- to your King Soopers card and King Soopers will make a donation to us every quarter. Register your card online and link our name at www.kingsoopers.com/communityrewards.
 { .mt1 .pt1 .fw5 }
-
 {{<column>}}
 **Q:** Can I still support multiple organizations?
 { .qa }
@@ -49,6 +49,7 @@ Make us your preferred organization for the King Soopers community rewards progr
 ***
 
 {{<columns>}}
+
 ### Advertising:
 { .purple }
 
@@ -70,7 +71,9 @@ Programs are booklet style, a full page image area is 6.5"x8"
     show-company=true
     message="Please indicate which programs (spring/fall) you would like to advertise in, as well as the size. We will respond with details of placement, image information and more."
 >}}
+
 {{<column>}}
+
 ### Sponsorship:
 { .purple }
 
@@ -87,4 +90,5 @@ Programs are booklet style, a full page image area is 6.5"x8"
     show-telephone=true
     show-message=false
 >}}
+
 {{<end-block 2 true>}}
