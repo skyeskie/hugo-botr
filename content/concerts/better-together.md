@@ -9,10 +9,10 @@ extra: with Denver Bronze
 dates:
   - date: 2026-06-06
     time: 19:00
-    # location: splc
+    location: Thornton
   - date: 2026-06-11
     time: 19:30
-    # location: embassy-suites
+    location: EmbSteLoveland
 selections:
   - subtitle: Combined Ensembles
     song: triumphant-celebration
