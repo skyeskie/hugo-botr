@@ -10,7 +10,7 @@
         <div class="cover-gradient-dim">
             {{ partials.Include "site-navigation-top.html" . }}
             <div class="{{ $header_section_class }}">
-                <h1 class="f2 f-subheadline-l fw6 ttu white-90 mb0 mt4 lh-title">
+                <h1 class="f1 fw7 ttu white-90 mb0 mt4 lh-title">
                     {{ .Title | compare.Default .Site.Title }}
                 </h1>
                 {{ with .Params.description }}
