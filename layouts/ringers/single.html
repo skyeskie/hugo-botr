@@ -1,10 +1,5 @@
 {{/* Imported from Ananke */}}
 
-{{ define "header" }}
-    {{/* We can override any block in the baseof file be defining it in the template */}}
-    {{ partials.Include "page-header.html" . }}
-{{ end }}
-
 {{ define "main" }}
     {{- $defaultRingerImage := "/ringers/_default.jpg" -}}
     {{- $related_content := .RegularPages.Related . -}}
