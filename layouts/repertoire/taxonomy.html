@@ -14,14 +14,26 @@
         {{- with .Page -}}
             {{/* Skip any songs marked as "external" */}}
             {{- if or (eq .Params.external true) (eq .Title "Repertoire") -}}
-{{/*                <p>SKIP: {{ .Title }}</p>*/}}
+                {{/*                <p>SKIP: {{ .Title }}</p>*/}}
                 {{- continue -}}
+            {{- end -}}
+
+            {{- $slug := .Slug -}}
+            {{- $nVideos := 0 -}}
+            {{- range .Pages -}}
+                {{- if .Title -}}
+                    {{- range (where .Params.selections "song" $slug) }}
+                        {{- with .videos -}}
+                            {{- $nVideos = add $nVideos (len .) -}}
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
             {{- end -}}
             <p class="dib tr pr2 mv0" style="grid-column-start: 1;"><b style="font-size: 1.2em;">
                 <a href="{{ .RelPermalink }}" style="color: gold;">{{ .Title }}</a>
             </b></p>
             {{- $icon := resources.Get "ananke/socials/youtube.svg" -}}
-            <p class="dib tc mv0 ph1 pt1">Vid?</p>
+            <p class="dib tc mv0 ph1 pt1">{{- if gt $nVideos 0 -}}Vid {{ $nVideos -}}{{- end -}}</p>
             <p class="dib tl pl2 mv0 pt1">
                 {{ $composer := first 1 (.GetTerms "composer") }}
                 {{ range $composer }} <a class="fw4 link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
@@ -39,10 +51,24 @@
                 {{/*                <p>SKIP: {{ .Title }}</p>*/}}
                 {{- continue -}}
             {{- end -}}
+
+            {{- $slug := .Slug -}}
+            {{- $nVideos := 0 -}}
+            {{- range .Pages -}}
+                {{- if .Title -}}
+                    {{- range (where .Params.selections "song" $slug) }}
+                        {{- with .videos -}}
+                            {{- $nVideos = add $nVideos (len .) -}}
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+            {{- end -}}
             <div class="bg-gray mv2 br-pill">
-                <p class="fl mh4 mv0">2026</p>
-                <p class="fr mh4 mv0">Video 3</p>
                 <h3 class="mv0" style="font-size: 1.2em;"><a href="{{ .RelPermalink }}" style="color: gold;">{{ .Title }}</a></h3>
+                <p class="fl mh4 mv0">2026</p>
+                {{- if gt $nVideos 0 -}}
+                    <p class="fr mh4 mv0">Videos {{ $nVideos }}</p>
+                {{- end -}}
                 <p class="mv0" style="font-size: 0.9em;">
                     {{- partial "list-terms-link.html" (.GetTerms "composer") -}}
                     {{- range (.GetTerms "arranger") }} arr. <a class="fw4 link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
