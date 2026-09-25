@@ -75,6 +75,7 @@ content:
         type: rich-text
   - name: locations
     label: Concert Locations
+    type: collection
     path: content/locations
     format: yaml-frontmatter
     fields:
@@ -107,6 +108,7 @@ content:
         description: City or Abbreviation
   - name: repertoire
     label: Repertoire Pieces
+    type: collection
     path: content/repertoire
     filename:
       template: "{slug}/_index.md"
@@ -125,8 +127,7 @@ content:
       - name: composer
         label: Composer
         type: string
-        list:
-          min: 1
+        list: true
         required: true
       - name: arranger
         label: Arranger
