@@ -1,0 +1,57 @@
+<!--
+
+Input: Date object for concert
+{ date: YYYY-MM-DD, time: HH:mm, location: ref-location }
+If no date, omit
+Check location and time
+- Have both -> Display full
+- Only location -> Time TBA
+- Only time -> Location TBA
+- Neither -> Time and Location TBA
+
+Also need to check - if date in the past, just omit rather than TBA
+
+-->
+{{ $date := .date | default "unknown" }}
+{{ if eq $date "unknown" }}
+    {{ return }}
+{{ end }}
+
+{{ $datetime := fmt.Printf "%sT%s:00" $date (.time | default "00:00") }}
+{{- $cutoff := time.Now.Add (time.Duration "hour" 24) -}}
+{{ $past_concert := gt (time.AsTime $datetime) $cutoff }}
+{{ $have_time := .time | default "unknown" | ne "unknown" }}
+
+{{ $where := "" }}
+{{ $all_locations := (site.GetPage "/locations/").Pages | default (slice) }}
+{{ with .location }}
+    {{ $loc_page := where $all_locations "Params.short" "eq" . }}
+    {{ range $loc_page }}
+    {{ $where = .Params }}
+    {{ end }}
+{{ end }}
+
+<h3 class="mb0">{{ time.Format "Monday, January 2, 2006" $datetime }}</h3>
+<p class="mh4 mv0">
+{{ with .date_extra }}
+{{ . }}<br />
+{{ end }}
+{{ with $where }}
+{{ .title }}<br />
+{{ .street }} {{ .city }}, {{ .state }}<br />
+{{ else }}
+    {{- if $past_concert -}}
+    Location TBD<br />
+    {{- end -}}
+{{ end }}
+{{ if $have_time }}
+    {{- if ne (time.Format "04" $datetime) "00" -}}
+        {{ time.Format "3:04pm" $datetime }}
+    {{- else -}}
+        {{ time.Format "3pm" $datetime }}
+    {{- end -}}
+{{- end -}}
+{{- with .time_extra -}}
+    , {{ . }}
+{{ end }}
+</p>

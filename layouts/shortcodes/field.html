@@ -1,0 +1,11 @@
+{{- /*
+@param {String} 0 field name
+@param {String} 1 Label text
+@param {boolean} 2 Whether form is required
+
+*/ -}}
+{{- if eq (.Get "type") "textarea" -}}
+    {{- partial "form-textarea.html" . -}}
+{{- else -}}
+    {{- partial "form-field.html" . -}}
+{{- end -}}

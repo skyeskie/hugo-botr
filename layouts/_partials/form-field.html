@@ -1,0 +1,26 @@
+{{- /*
+Adapted from Ananke theme
+
+@param {String} [name] field name
+@param {bool} [show-message=true] Whether to include the main message block
+@param {bool} [show-telephone=false] Whether to include a field for phone number
+@param {bool} [show-company=false] Whether to include a field for company name
+@param {String} [message] Alternative to translated Message, if show-message (TODO: i18n)
+
+*/ -}}
+{{ $.Scratch.Add "labelClasses" "f6 b db mb1 mt3 sans-serif light-gray" }}
+{{ $.Scratch.Add "inputClasses" "w-100 f5 pv3 ph3 bg-dark-gray light-gray bn" }}
+{{ $req := "<span class=\"form-required\">*</span>" | safeHTML }}
+{{ $name := .Get "name" }}
+{{ $label := .Get "label" }}
+{{ $required := .Get "required" }}
+{{ $type := .Get "type" | default "text" }}
+{{ $placeholder := .Get "hint" | default " " }}
+
+<label class="{{ $.Scratch.Get "labelClasses" }}" for="{{ $name }}">
+    {{ $label }}{{ if $required }}{{$req}}{{ end }}
+</label>
+<input type="{{ $type }}" id="{{ $name }}" name="{{ $name }}"
+       class="{{ $.Scratch.Get "inputClasses" }}"
+       {{ if $required }}required{{ end }}
+       placeholder="{{ $placeholder }}" aria-labelledby="{{ $name }}"/>

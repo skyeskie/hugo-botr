@@ -1,0 +1,14 @@
+{{- /* Input: Text array */ -}}
+{{- $len := len . -}}
+{{- if eq $len 0 -}}
+{{- else if eq $len 1 -}}
+    {{- range . -}}{{ . }}{{- end -}}
+{{- else if eq $len 2 -}}
+    {{- range (first 1 .) -}}{{ . }}{{- end -}}
+    {{- " and " -}}
+    {{- range (last 1 .) -}}{{ . }}{{- end -}}
+{{- else if gt $len 2 -}}
+    {{- range (first (sub $len 1) .) -}}{{ . }}, {{ end -}}
+    {{- " and " -}}
+    {{- range (last 1 .) -}}{{ . }}{{- end -}}
+{{- end -}}

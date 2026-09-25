@@ -1,0 +1,81 @@
+{{ define "main" }}
+    {{ $summary_template := "summary" }}
+    {{ if $.Param "ananke.pages.show_list_images" }}
+        {{ $summary_template = "summary-with-image" }}
+    {{ end }}
+
+{{/*    <pre>{{ range $k,$v := site.Taxonomies.repertoire }}*/}}
+{{/*        {{ $k }}: {{len $v }}{{ end }}</pre>*/}}
+
+    <article class="ringers-index pa3 pa4-ns nested-copy-line-height {{ $.Param "text_color" | compare.Default "mid-gray" }} center f4 {{ $.Param "post_content_classes" | compare.Default "serif"}}">
+        {{- .Content -}}
+        <ul class="list pa0" style="display: grid; grid-template-columns: 1fr 60px 1fr;">
+        {{- range site.Taxonomies.repertoire -}}
+        {{- with .Page -}}
+            {{/* Skip any songs marked as "external" */}}
+            {{- if or (eq .Params.external true) (eq .Title "Repertoire") -}}
+                {{/*                <p>SKIP: {{ .Title }}</p>*/}}
+                {{- continue -}}
+            {{- end -}}
+
+            {{- $slug := .Slug -}}
+            {{- $nVideos := 0 -}}
+            {{- range .Pages -}}
+                {{- if .Title -}}
+                    {{- range (where .Params.selections "song" $slug) }}
+                        {{- with .videos -}}
+                            {{- $nVideos = add $nVideos (len .) -}}
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+            {{- end -}}
+            <p class="dib tr pr2 mv0" style="grid-column-start: 1;"><b style="font-size: 1.2em;">
+                <a href="{{ .RelPermalink }}" style="color: gold;">{{ .Title }}</a>
+            </b></p>
+            {{- $icon := resources.Get "ananke/socials/youtube.svg" -}}
+            <p class="dib tc mv0 ph1 pt1">{{- if gt $nVideos 0 -}}Vid {{ $nVideos -}}{{- end -}}</p>
+            <p class="dib tl pl2 mv0 pt1">
+                {{ $composer := first 1 (.GetTerms "composer") }}
+                {{ range $composer }} <a class="fw4 link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+                {{- if gt (len .Params.composer) 1 }} et al{{- end }}
+                {{- range (.GetTerms "arranger") }} arr. <a class="fw4 link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+                {{- range (.GetTerms "transcriber") }} trans. <a class="fw4 link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+            </p>
+        {{- end -}}
+        {{- end -}}
+        </ul>
+        <hr />
+        {{- range site.Taxonomies.repertoire -}}
+        {{- with .Page -}}
+            {{- if or (eq .Params.external true) (eq .Title "Repertoire") -}}
+                {{/*                <p>SKIP: {{ .Title }}</p>*/}}
+                {{- continue -}}
+            {{- end -}}
+
+            {{- $slug := .Slug -}}
+            {{- $nVideos := 0 -}}
+            {{- range .Pages -}}
+                {{- if .Title -}}
+                    {{- range (where .Params.selections "song" $slug) }}
+                        {{- with .videos -}}
+                            {{- $nVideos = add $nVideos (len .) -}}
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+            {{- end -}}
+            <div class="bg-gray mv2 br-pill">
+                <h3 class="mv0" style="font-size: 1.2em;"><a href="{{ .RelPermalink }}" style="color: gold;">{{ .Title }}</a></h3>
+                <p class="fl mh4 mv0">2026</p>
+                {{- if gt $nVideos 0 -}}
+                    <p class="fr mh4 mv0">Videos {{ $nVideos }}</p>
+                {{- end -}}
+                <p class="mv0" style="font-size: 0.9em;">
+                    {{- partial "list-terms-link.html" (.GetTerms "composer") -}}
+                    {{- range (.GetTerms "arranger") }} arr. <a class="fw4 link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+                    {{- range (.GetTerms "transcriber") }} trans. <a class="fw4 link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+                </p>
+            </div>
+        {{- end -}}
+        {{- end -}}
+    </article>
+{{ end }}

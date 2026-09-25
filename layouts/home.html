@@ -1,0 +1,73 @@
+{{ define "main" }}
+
+    {{- $config := site.Params.ananke.home -}}
+    {{- $text_alignment := "tc-l" -}}
+    {{- if eq $config.content_alignment "left" -}}
+        {{- $text_alignment = "tl-l" -}}
+    {{- else if eq $config.content_alignment "right" -}}
+        {{- $text_alignment = "tr-l" -}}
+    {{- end -}}
+
+    {{- $right_image := "/images/home-right.jpg" -}}
+
+    <article class="cf ph3 ph5-l pv3 pv4-l f4 {{ $text_alignment }} center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+        <div>
+            <div class="fl w-50-m w-50-l center">
+                <h1>December 2026 Concerts</h1>
+                <ul class="list pl0">
+                    <li>Sat, Dec 12 at 4pm Location TBA</li>
+                    <li>Sun, Dec 13 at 4pm Location TBA</li>
+                    <li>Sat, Dec 19 Time and Location TBA</li>
+                </ul>
+                <div class="text-lg center">
+                    <a href="/repertoire/">View clips from our past performances.</a>
+                </div>
+            </div>
+            <div class="fl w-50-m w-50-l pa2">
+                {{ with resources.Get $right_image }}
+                <img src="{{ .RelPermalink }}" alt="Ringers" />
+                {{ end }}
+            </div>
+        </div>
+        <hr class="clear dark-gray" />
+        <div class="home-article">
+        {{ .Content }}
+        </div>
+    </article>
+
+    {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
+    {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "post") }}
+    {{ $show_recent_posts := site.Params.ananke.show_recent_posts }}
+    {{ $section := collections.Where $.Site.RegularPages "Section" "in" $mainSections }}
+    {{ $section_count := len $section }}
+
+    {{ if and ($show_recent_posts) (compare.Ge $section_count 1) }}
+        <div class="pa3 pa4-ns w-100 w-70-ns center">
+            {{ $n_posts := $.Param "recent_posts_number" | compare.Default 3 }}
+
+            <section class="w-100 mw8">
+                {{/* Range through the first $n_posts items of the section */}}
+                {{ range (collections.First $n_posts $section) }}
+                    <div class="w-100 mb4 relative">
+                        {{ .Render "summary-with-image" }}
+                    </div>
+                {{ end }}
+            </section>
+
+            {{ if compare.Ge $section_count (math.Add $n_posts 1) }}
+                <section class="w-100">
+                    <h1 class="f3">{{ lang.Translate "more" }}</h1>
+                    {{/* Now, range through the next four after the initial $n_posts items. Nest the requirements, "after" then "first" on the outside */}}
+                    {{ range (collections.First 4 (collections.After $n_posts $section))  }}
+                        <h2 class="f5 fw4 mb4 dib {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "ml3" "mr3" }}">
+                            <a href="{{ .RelPermalink }}" class="link black dim">
+                                {{ .Title }}
+                            </a>
+                        </h2>
+                    {{ end }}
+                </section>
+            {{ end }}
+
+        </div>
+    {{ end }}
+{{ end }}

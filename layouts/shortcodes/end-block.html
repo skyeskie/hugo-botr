@@ -1,0 +1,11 @@
+{{- $num_div := .Get 0 | default 1 -}}
+{{- $clearfix := .Get 1 | default false -}}
+{{- if (lt $num_div 1) -}}
+    {{- fmt.Errorf "Need to have at least 1 div close." -}}
+{{- end -}}
+{{- if $clearfix -}}
+    {{- fmt.Print "</div>" | safe.HTML -}}
+    {{- $num_div = sub $num_div 1 -}}
+    <div style="clear:both"></div>
+{{- end -}}
+{{- strings.Repeat $num_div "</div>\n" | safe.HTML -}}

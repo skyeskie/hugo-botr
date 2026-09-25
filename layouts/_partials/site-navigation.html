@@ -1,10 +1,10 @@
 <nav class="pt3 ph3 ph4-ns pb1" role="navigation">
     {{ if .Site.Menus.main }}
         {{- $curLink := .RelPermalink -}}
-        <ul class="flex flex-wrap justify-around {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pr0 ml3" "pl0 mr3" }}">
+        <ul class="flex flex-wrap justify-center {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pr0 ml3" "pl0 mr3" }}">
             {{ range .Site.Menus.main }}
                 {{ if ne ( .URL ) ( $curLink ) }}
-                <li class="list f5 f4-ns fw4 dib mv2 center {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl3" "pr3" }}">
+                <li class="list f5 f4-ns fw4 dib mv2 {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl3" "pr3" }}">
                     <a class="hover-white grow white-90 no-underline dib bg-dark-gray br-pill ph3 pv2 ttu" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
                         {{ .Name }}
                     </a>

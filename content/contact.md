@@ -1,24 +1,27 @@
 ---
-Title: "Contact Bells of the Rockies"
+title: 'Contact Bells of the Rockies'
 featured_image: '/images/bg-handbells.jpg'
 ---
 
-Email us at {{< br >}}
-bellsoftherockies1996@gmail.com
-{ .center }
+{{<columns>}}
+{{< center >}}
+{{< icon facebook "center large" "https://www.facebook.com/BellsoftheRockiesFans/" >}}
 
-{{< columns >}}
-
-
-Facebook
+### [Like us on Facebook!](https://www.facebook.com/BellsoftheRockiesFans/)
+{{< end-block >}}
 
 ![Treble Ringers](/images/bellsoftherockiesapril2025-141.jpg)
+{{<column>}}
+{{< center >}}
 
-{{< column >}}
+Email us at
+bellsoftherockies1996@gmail.com
 
-{{< form-contact-custom
-    action="https://www.bellsoftherockies.org/ajax/apps/formSubmitAjax.php"
-    message-label="Comment"
->}}
+{{< end-block >}}
 
-{{< endcolumns >}}
+{{< form-custom action="https://docs.google.com/forms/d/e/1FAIpQLSfnE7CN9oDXrZXx0CLRWdaJGROqATtdGP3sJLKtze9lJnUjNA/formResponse" >}}
+   {{< field name="entry.872977855" type="text" label="Name" required=true hint="" >}}
+   {{< field name="entry.1377293043" type="email" label="Email" required=true hint="" >}}
+   {{< field name="entry.149761574" type="textarea" label="Comment" required=true hint="" >}}
+{{< /form-custom >}}
+{{<end-block 2 true>}}
