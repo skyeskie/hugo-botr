@@ -7,6 +7,10 @@ media:
     label: Ringer Photos
     input: assets/ringers
     output: /ringers
+  - name: concerts
+    label: Concert Logos and Posters
+    input: assets/concerts
+    output: /concerts
 settings:
   commit:
     identity: user
@@ -118,6 +122,11 @@ content:
       template: "{slug}/_index.md"
       field: true
     fields:
+      - name: slug
+        label: Piece ID
+        type: string
+        required: true
+        description: Used for reference from concert
       - name: external
         label: External Group Piece
         type: boolean
@@ -154,3 +163,138 @@ content:
           rename: safe
         required: false
         description: 'Lyrics, concert notes?'
+  - name: concerts
+    label: Concerts
+    type: collection
+    path: content/concerts
+    exclude:
+      - /_index.md
+    view:
+      fields: [year, season, extra, title]
+      sort: [sort, title]
+      default:
+        sort: sort
+        order: asc
+      layout: list
+    fields:
+      - name: year
+        label: Year
+        type: number
+        min: 1996
+        max: 2100
+        required: true
+      - name: season
+        label: Season/Month
+        type: string
+        required: true
+      - name: poster
+        label: Promotional Poster
+        type: image
+        options:
+          media: concerts
+          rename: safe
+        required: false
+      - name: logo
+        label: Concert Logo
+        type: image
+        options:
+          media: concerts
+          rename: safe
+        required: false
+        description: Should be similar to poster, without text details
+      - name: extra
+        label: Extra Description
+        description: 'Ex: Area 11 Festival. Usually blank'
+        required: false
+      - name: sort
+        label: Sort String
+        description: 'Should force to roughly time order (YYYY-MM)'
+        type: string
+        required: true
+      - name: title
+        label: Program Title
+        type: string
+        required: true
+      - name: public_after
+        label: Publish After
+        type: date
+        required: false
+        options:
+          time: true
+        description: Use to delay when videos release. Will require rebuild.
+      - name: dates
+        label: Concert Dates
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: '({short}) {date} {time}'
+        fields:
+          - name: date
+            type: date
+            options:
+              time: false
+            required: true
+          - name: time
+            type: date
+            options:
+              time: true
+              format: 'HH:mm'
+              step: 5
+            description: 'WOULD CHANGE IF PagesCMS since no time-only field'
+            required: false
+          - name: date_extra
+            label: Date extra text
+            type: string
+            description: Text to display between the date and the address. Use for comments about the concert itself
+            required: false
+          - name: time_extra
+            label: Time extra text
+            type: string
+            description: Text to display after the time. Use for pre-concert or time notes
+            required: false
+          - name: location
+            type: reference
+            options:
+              collection: locations
+              value: "{short}"
+              label: "{title}"
+          - name: short
+            label: Short display string
+            type: string
+            required: true
+            description: Used for YouTube video links. (ie May 2 Greeley)
+          - name: playlist_id
+            label: YouTube Playlist
+            type: string
+            description: Playlist of this specific date. WIP will add to concert page
+            required: false
+      - name: selections
+        label: Music Selections
+        type: object
+        required: false
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{subtitle} | {song}'
+        fields:
+          - name: subtitle
+            label: Subtitle
+            description: Concert-specific subtitle (Wonder)
+            type: string
+            required: false
+          - name: song
+            label: Song
+            type: reference
+            options:
+              collection: repertoire
+              value: '{slug}'
+              label: '{title}'
+            required: true
+            # Skipping instrumentalists and videos, since there's no Key-Value option
+            # Would need to switch to object list
+      - name: body
+        label: Concert Description
+        type: rich-text
+        required: false
