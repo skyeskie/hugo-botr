@@ -291,6 +291,7 @@ content:
             type: reference
             options:
               collection: repertoire
+              search: "name,fields.slug,fields.title,path"
               value: "{fields.slug}"
               label: "{fields.title}"
             required: true
