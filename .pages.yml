@@ -289,8 +289,8 @@ content:
             type: reference
             options:
               collection: repertoire
-              value: '{slug}'
-              label: '{title}'
+              value: '{fields.slug}'
+              label: '{fields.title}'
             required: true
             # Skipping instrumentalists and videos, since there's no Key-Value option
             # Would need to switch to object list
