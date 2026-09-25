@@ -204,6 +204,7 @@ content:
         description: Should be similar to poster, without text details
       - name: extra
         label: Extra Description
+        type: string
         description: 'Ex: Area 11 Festival. Usually blank'
         required: false
       - name: sort
@@ -289,8 +290,8 @@ content:
             type: reference
             options:
               collection: repertoire
-              value: '{fields.slug}'
-              label: '{fields.title}'
+              value: "{fields.slug}"
+              label: "{fields.title}"
             required: true
             # Skipping instrumentalists and videos, since there's no Key-Value option
             # Would need to switch to object list
