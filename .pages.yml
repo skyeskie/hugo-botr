@@ -7,6 +7,11 @@ media:
     label: Ringer Photos
     input: assets/ringers
     output: /ringers
+settings:
+  commit:
+    identity: user
+  content:
+    merge: true
 content:
   - name: main
     label: Main Pages
@@ -32,6 +37,8 @@ content:
     label: Ringer Bios
     type: collection
     path: content/ringers
+    exclude:
+      - _index.md
     subfolders: false
     format: yaml-frontmatter
     view:
@@ -42,15 +49,12 @@ content:
         order: asc
       layout: list
     fields:
-      - name: title
-        label: Full Name
-        type: image
-      - name: photo
-        label: Ringer Photo
-        type: image
-        options:
-          media: ringers
-          rename: safe
+      - name: first
+        label: First Name
+        type: string
+      - name: last
+        label: Last Name
+        type: string
       - name: director
         label: Director
         type: boolean
@@ -61,6 +65,87 @@ content:
       - name: weight
         label: Sort (numeric)
         type: number
+      - name: photo
+        label: Ringer Photo
+        type: image
+        options:
+          media: ringers
+          rename: safe
       - name: body
         type: rich-text
-    
+  - name: locations
+    label: Concert Locations
+    path: content/locations
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Display Name
+        type: string
+        required: true
+      - name: image
+        type: image
+        options:
+          media: images
+          rename: safe
+      - name: street
+        label: Street Address
+        type: string
+        required: true
+      - name: city
+        label: City
+        type: string
+        required: true
+      - name: state
+        label: State
+        type: string
+        required: true
+        maxlength: 2
+      - name: short
+        label: Short Unique Description
+        type: string
+        required: true
+        description: City or Abbreviation
+  - name: repertoire
+    label: Repertoire Pieces
+    path: content/repertoire
+    filename:
+      template: "{slug}/_index.md"
+      field: true
+    fields:
+      - name: external
+        label: External Group Piece
+        type: boolean
+        default: false
+        required: false
+        description: Indicate has not been performed by BotR (ie other ensemble in joint concert)
+      - name: title
+        label: Piece Title
+        type: string
+        required: true
+      - name: composer
+        label: Composer
+        type: string
+        list:
+          min: 1
+        required: true
+      - name: arranger
+        label: Arranger
+        type: string
+        description: 'arr. '
+        required: false
+      - name: adapted
+        label: Adapted BY
+        type: string
+        required: false
+      - name: transcribed
+        label: Transcribed By
+        type: string
+        required: false
+      - name: body
+        label: Extra Info
+        type: rich-text
+        options:
+          media: images
+          rename: safe
+        required: false
+        description: 'Lyrics, concert notes?'
