@@ -169,7 +169,7 @@ content:
     type: collection
     path: content/concerts
     exclude:
-      - /_index.md
+      - _index.md
     view:
       fields: [year, season, extra, title]
       sort: [sort, title]
