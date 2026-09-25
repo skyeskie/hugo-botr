@@ -116,6 +116,7 @@ content:
     label: Repertoire Pieces
     type: collection
     path: content/repertoire
+    subfolders: true
     exclude:
       - /_index.md
     filename:
