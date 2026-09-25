@@ -42,8 +42,8 @@ content:
     subfolders: false
     format: yaml-frontmatter
     view:
-      fields: [title, director, sort, weight]
-      sort: [title, sort, weight]
+      fields: [first, last, director, sort, weight]
+      sort: [first, last, sort, weight]
       default:
         sort: sort
         order: asc
@@ -78,6 +78,8 @@ content:
     type: collection
     path: content/locations
     format: yaml-frontmatter
+    exclude:
+      - _index.md
     fields:
       - name: title
         label: Display Name
@@ -110,6 +112,8 @@ content:
     label: Repertoire Pieces
     type: collection
     path: content/repertoire
+    exclude:
+      - /_index.md
     filename:
       template: "{slug}/_index.md"
       field: true
