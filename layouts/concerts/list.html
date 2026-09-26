@@ -28,7 +28,7 @@
         {{ end }}
     {{- end -}}
     {{- range $future_concerts.Reverse -}}
-        {{- if ne .Title "TBD" "" "tbd" "Untitled" -}}
+        {{- if and (ne .Title "" "Untitled") (not (findRE "TBD" .Title)) -}}
             <h3>{{ .Title }}</h3>
         {{- end -}}
         {{- range sort .Params.dates "date" -}}

@@ -7,18 +7,45 @@
     {{- else if eq $config.content_alignment "right" -}}
         {{- $text_alignment = "tr-l" -}}
     {{- end -}}
-
-    {{- $right_image := "/images/home-right.jpg" -}}
-
+    {{- $dates := (slice) -}}
+    {{- $right_image := "" -}}
+    {{- range .Params.concerts | uniq -}}
+        {{- with (site.GetPage "/concerts/").GetPage . -}}
+            {{- $dates = append $dates .Params.dates -}}
+            {{- if not $right_image -}}
+                {{- with .Params.poster -}}
+                    {{ $right_image = . }}
+                {{- else with .Params.logo -}}
+                    {{ $right_image = . }}
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+    {{- if not $right_image -}}
+        {{ $right_image = .Params.fallback_concert_image | default "/images/home-right.jpg" }}
+    {{- end -}}
+    {{- $dates = sort $dates "date" -}}
     <article class="cf ph3 ph5-l pv3 pv4-l f4 {{ $text_alignment }} center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
         <div>
             <div class="fl w-50-m w-50-l center">
-                <h1>December 2026 Concerts</h1>
+                <h1>{{ .Params.concerts_title | default "Upcoming Concerts"}}</h1>
+                <a href="/concerts/" class="link">
                 <ul class="list pl0">
-                    <li>Sat, Dec 12 at 4pm Location TBA</li>
-                    <li>Sun, Dec 13 at 4pm Location TBA</li>
-                    <li>Sat, Dec 19 Time and Location TBA</li>
+                    {{- range $dates -}}
+                    <li class="mv3 lh-solid-l">
+                        <span class="white">{{ partial "concert-dt.html" . }}</span>
+                        {{ with .date_extra }}
+                            <br />
+                            <em class="f5 moon-gray">{{ . }}</em>
+                        {{ end }}
+                        {{ with .time_extra }}
+                            <br />
+                            <em class="f5 moon-gray">{{ . }}</em>
+                        {{ end }}
+                    </li>
+                    {{- end -}}
                 </ul>
+                </a>
                 <div class="text-lg center">
                     <a href="/repertoire/">View clips from our past performances.</a>
                 </div>
